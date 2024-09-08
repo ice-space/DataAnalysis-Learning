@@ -1,0 +1,178 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0ff1dbed-2483-423d-9f8b-60d69b18c055" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>拖欠历史记录</ID>
+  <Name>拖欠历史记录</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9b74b1f8-c823-48d4-a0b6-dba9c72a09ce">
+    <DataSourceViewID>CreditRisk</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="ca403268-a7ae-441c-b71c-5c3a9c58ca77">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="297352b6-69d2-429c-8bdd-15a19599d5f1">
+      <ID>客户号</ID>
+      <Name>客户号</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="879f8bdd-12ac-4441-93cf-10b7b045a735">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="009f6987-3710-4035-842f-f97ee965659e">
+            <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            <ColumnID>客户号</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d11d37d3-41a6-4301-a428-3537cc634b18">
+          <AttributeID>卡号</AttributeID>
+          <Name>卡号</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ec0c820a-d30e-4c6d-b828-2cf39030f01b">
+          <AttributeID>额度</AttributeID>
+          <Name>额度</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="99aa39d7-37ad-44c3-9773-be8ac0353ddb">
+          <AttributeID>拖欠标识</AttributeID>
+          <Name>拖欠标识</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="619c52e3-afad-4b37-9efb-eca347dd8573">
+          <AttributeID>拖欠总金额</AttributeID>
+          <Name>拖欠总金额</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6eb3d560-52ae-4103-a31e-3f3a41a80027">
+          <AttributeID>逾期天数</AttributeID>
+          <Name>逾期天数</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="06a9b1c6-459c-4eef-b54e-d82938666ddc">
+      <ID>卡号</ID>
+      <Name>卡号</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="808619e5-3033-4a2f-8323-b251ffcec423">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f01526b5-1370-4f0d-b3ab-573fa83d45cb">
+            <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            <ColumnID>卡号</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="27f4f303-4ea1-455c-97ff-9a10c8b93c25">
+      <ID>额度</ID>
+      <Name>额度</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="677f029d-cf3d-4632-be2c-f2d8ead5dbb3">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c59125bd-c525-4838-aba3-205135ccd73b">
+            <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            <ColumnID>额度</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b1576d7f-ef60-42c5-9192-e96750069741">
+      <ID>拖欠标识</ID>
+      <Name>拖欠标识</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ef3becec-ee20-462b-a005-bf18e664bf80">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="29904695-624d-4a6b-8a63-3ebef4b39ffd">
+            <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            <ColumnID>拖欠标识</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0fbb392e-3c61-4bb2-ac68-28cd5c6618b6">
+      <ID>拖欠总金额</ID>
+      <Name>拖欠总金额</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="90a3e813-ac1f-4f72-b08d-b9f4aa5ea6fe">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0382ace9-7bb7-4565-9ecf-013c1307af87">
+            <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            <ColumnID>拖欠总金额</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="512d6233-00f1-4805-892d-6bea4862e48c">
+      <ID>逾期天数</ID>
+      <Name>逾期天数</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0a504981-bd94-43d3-9bcc-ec5124040ea0">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c32531d-40a3-4483-a94b-fa90c2f52318">
+            <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            <ColumnID>逾期天数</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

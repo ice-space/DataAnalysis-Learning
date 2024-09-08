@@ -1,0 +1,96 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>CreditRisk</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>23KXBY9qR3Pb3Y7ezbbkdb/Cds4=2024/7/1 9:50:122024/7/1 9:50:12</TimeStamp>
+        <ID>
+          <String>CreditRisk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>pf7DCGJdkbuItxs8t33S+aLmCdM=2024/7/1 10:11:042024/7/1 9:51:27</TimeStamp>
+        <ID>
+          <String>CreditRisk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>P3dKHnwDzpBFdr7yfOvgnq41wg4=2024/7/1 10:17:042024/7/1 10:17:04</TimeStamp>
+        <ID>
+          <String>客户信用记录</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>U7keXCHoieUsmblDV4OyDLCRKZg=2024/7/1 10:17:432024/7/1 10:17:43</TimeStamp>
+        <ID>
+          <String>拖欠历史记录</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>3b6q0d7RTOoDbr3NwRLaZnUbZdo=2024/7/1 10:18:012024/7/1 10:18:00</TimeStamp>
+        <ID>
+          <String>消费历史记录</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ye9su5Px0GXIatKk4EHsjcX5bqs=2024/7/1 10:19:392024/7/1 10:19:39</TimeStamp>
+        <ID>
+          <String>申请客户信息</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>e429PKl5ioIDRB0qtinNcC4c6OQ=2024/7/1 10:19:392024/7/1 10:19:392siQo279QUG1Fhi5UgRZO6572f4=2024/7/1 10:19:392024/7/1 10:19:39</TimeStamp>
+        <ID>
+          <String>CreditRisk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>6S7108nuRV2vhzDgbmAziJnb1Cs=2024/7/1 10:42:192024/7/1 10:26:29</TimeStamp>
+        <ID>
+          <String>客户信用记录</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>kKYjFLdeGP6ivj8uP1vWoCSQjsI=2024/7/1 11:00:242024/7/1 11:00:24</TimeStamp>
+        <ID>
+          <String>客户信用记录 1</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>IOBcpdz2ABuJi89qiCpNz8JMSTA=2024/7/1 9:49:172024/7/1 9:49:17</TimeStamp>
+      <ID>
+        <String>CreditRisk</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-07-01T03:00:41.68Z</LastDeployed>
+</DeploymentSnapshot>

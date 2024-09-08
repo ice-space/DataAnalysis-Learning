@@ -1,0 +1,408 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="368c682d-abe3-4711-a92e-3811a6bc5bb1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>客户信用记录</ID>
+  <Name>客户信用记录</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8bd20e0c-b4a4-4437-b0d7-22d7d934ea65">
+    <DataSourceViewID>CreditRisk</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="89abc018-a187-4071-9e81-d6bbab6ed94c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="c4f34cd9-7efd-42bc-883a-43ad97763dd3">
+      <ID>客户号</ID>
+      <Name>客户号</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="284e3a09-7530-4a9f-bf81-fc3c2ba1c160">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e3b76769-3257-4d50-b8fd-1602c0a52ddb">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>客户号</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1402566e-e7ad-4f17-87f4-e3a8df12aa09">
+          <AttributeID>客户姓名</AttributeID>
+          <Name>客户姓名</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3a81cb0e-a110-4f01-bdc9-f2da4abbd14a">
+          <AttributeID>性别</AttributeID>
+          <Name>性别</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0e14ab0a-45da-482d-aa93-759a810fd5dc">
+          <AttributeID>年龄 连续</AttributeID>
+          <Name>年龄 连续</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="34a14ae7-6f8f-40b8-b470-468de67551b2">
+          <AttributeID>婚姻状态</AttributeID>
+          <Name>婚姻状态</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="661797c5-c742-4c69-bc21-e39f0e72cca7">
+          <AttributeID>户籍</AttributeID>
+          <Name>户籍</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7c53c26d-6703-45bd-8919-a79823eb09ca">
+          <AttributeID>教育程度</AttributeID>
+          <Name>教育程度</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="527a582f-25e1-490b-92d5-d76728298036">
+          <AttributeID>居住类型</AttributeID>
+          <Name>居住类型</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c996f35f-5c49-465d-9ab6-f00f69fbf006">
+          <AttributeID>职业类别</AttributeID>
+          <Name>职业类别</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="883135dd-0149-4adb-9012-801ef5e3b112">
+          <AttributeID>工作年限</AttributeID>
+          <Name>工作年限</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="da741a2e-05d9-42d9-ab93-edb8b65d1167">
+          <AttributeID>个人收入 连续</AttributeID>
+          <Name>个人收入 连续</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="69c52bd9-2d99-41fe-81db-9649e5887109">
+          <AttributeID>保险缴纳</AttributeID>
+          <Name>保险缴纳</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="713f7f5f-82fb-4027-912b-9309647384e5">
+          <AttributeID>车辆情况</AttributeID>
+          <Name>车辆情况</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="efe7c75f-4282-4a65-bcd8-23e99df5eea6">
+          <AttributeID>信用总评分</AttributeID>
+          <Name>信用总评分</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="804a71d8-1a11-4da7-85d7-791d4ab6408c">
+          <AttributeID>信用等级</AttributeID>
+          <Name>信用等级</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="42c17f79-711e-480d-a50e-d47f4cb01dd3">
+          <AttributeID>额度</AttributeID>
+          <Name>额度</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="75db8df5-19ef-43aa-81e4-f359db4f31f5">
+          <AttributeID>审批结果</AttributeID>
+          <Name>审批结果</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8a222341-89c6-4433-958f-cbfaacdbae93">
+      <ID>客户姓名</ID>
+      <Name>客户姓名</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d01afa00-f71c-46e2-816f-2d416b5a4850">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="25ce8844-5f75-4fd9-b22b-0a7ab4ffa973">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>客户姓名</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8ec0a3c4-8702-430d-921e-ad86e3019b86">
+      <ID>性别</ID>
+      <Name>性别</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7ea6619d-4b3a-401f-a0d9-757aa2f6e34d">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b382ad7-eb6f-4faf-b177-373d04f84edd">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>性别</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a50921ea-4238-451d-93b7-fa3df3fb0fca">
+      <ID>年龄 连续</ID>
+      <Name>年龄 连续</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0c1773f7-9b4b-4e19-b361-a2131f1ab370">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4cbd68c-3cc9-4823-a347-4d662aa602df">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>年龄_连续</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d026e798-e7ca-4f4e-8ca9-84f2932b5b9e">
+      <ID>婚姻状态</ID>
+      <Name>婚姻状态</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c33cd3d6-da87-444a-924f-f73b729001a7">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c304429a-d20b-4456-b4ef-72227cd4b50e">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>婚姻状态</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="12f0eca7-85b9-47e9-9783-9350bcb7dd84">
+      <ID>户籍</ID>
+      <Name>户籍</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="400a2aad-758a-4eee-85a6-e9aa57a03fc8">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8a7b96fd-3319-42a5-bfbf-32ae79f8c7f3">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>户籍</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="778e6bcc-e21e-4d56-8193-936c0fe9c61a">
+      <ID>教育程度</ID>
+      <Name>教育程度</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="98a32d57-1336-4761-9d16-b36ac17d8e09">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="391e432b-492d-490b-9c14-7d5ba6bcac1a">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>教育程度</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ecdbbda6-dff0-4984-86a4-c32abdeded66">
+      <ID>居住类型</ID>
+      <Name>居住类型</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4eaae9e6-83e6-40c2-b548-d47c5fc41564">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="939c1192-340f-407a-9fd5-ff86104d782e">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>居住类型</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="06d4e74a-6be7-48b1-a785-985a579101d6">
+      <ID>职业类别</ID>
+      <Name>职业类别</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d2fc10a4-562d-4058-a567-4fa2dd11808b">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5692a9a8-9f95-4238-aca8-5248d993357d">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>职业类别</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1c909d1b-2cee-4e90-89d3-5459123fe696">
+      <ID>工作年限</ID>
+      <Name>工作年限</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3ace8c4-6e36-4753-8f69-508586410e70">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a0c335eb-eb5d-436b-b2fd-9d239309fa31">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>工作年限</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="44584458-a165-49ab-8f03-aca18aed33a7">
+      <ID>个人收入 连续</ID>
+      <Name>个人收入 连续</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="112810b2-5872-43f7-b78e-bcebf176a9f3">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bcab94e3-07a8-40b8-a42d-f3d00d0696c5">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>个人收入_连续</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ecbacf55-7c76-49a5-b919-66928769d5c3">
+      <ID>保险缴纳</ID>
+      <Name>保险缴纳</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8e340f36-019d-45cd-8f2c-9b714026b74f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed3a62b7-96e2-48de-bd29-f73e877eef58">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>保险缴纳</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c0c8af99-0010-4995-9090-e94154e4e0a3">
+      <ID>车辆情况</ID>
+      <Name>车辆情况</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e854b67c-2ab4-4106-b2f7-37a293eeb5f8">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c5ff6194-c4ca-4932-902e-282b995514a2">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>车辆情况</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1ea40780-b472-45cb-98bf-06b4737da770">
+      <ID>信用总评分</ID>
+      <Name>信用总评分</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1a59d434-de9c-48ab-ae8b-b5670b38ad0c">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3593a724-7cef-4887-8ee6-7a8f0a527082">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>信用总评分</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="49bb2eef-33ff-4c16-bea5-61fbf787c817">
+      <ID>信用等级</ID>
+      <Name>信用等级</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d04e0410-b25d-46e1-9214-a984664fac28">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="92198d1c-bbfb-4455-a229-ab3dedc85080">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>信用等级</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b3473192-9cc1-4b7d-b0f4-441dd4eb2aa7">
+      <ID>额度</ID>
+      <Name>额度</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aeb49cc8-97d0-41ac-83db-46d9c628be8b">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fae94ccd-a453-4209-9d09-a52c3f9ce0a1">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>额度</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3e1f23bd-a61a-48ff-9628-7a1892d1102f">
+      <ID>审批结果</ID>
+      <Name>审批结果</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3a2de0ae-a0da-4c6b-8dea-b2c1de72c28d">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c63f026-b015-4cdf-af92-089e6bbecdb3">
+            <TableID>dbo_客户信用记录_x0024_</TableID>
+            <ColumnID>审批结果</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

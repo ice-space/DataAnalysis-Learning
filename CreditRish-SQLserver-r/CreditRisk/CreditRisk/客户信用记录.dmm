@@ -1,0 +1,650 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4e7b4838-a844-416f-a7b8-2ae61cfbb9a4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>客户信用记录</ID>
+  <Name>客户信用记录</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>MDXFilterComponent</Name>
+      <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition" /&gt;&lt;/Filter&gt;</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="CubeDimensionBinding" dwd:design-time-name="dc17adf1-1a59-4150-88bd-141095755890">
+    <DataSourceID>.</DataSourceID>
+    <CubeID>CreditRisk</CubeID>
+    <CubeDimensionID>客户信用记录</CubeDimensionID>
+    <Filter></Filter>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="3577aeb3-925e-4b2e-a6e4-9871d8b31e5a">
+      <ID>客户号</ID>
+      <Name>客户号</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="f900db2e-3627-4285-830c-78ce7f38d0b0">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>客户号</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Key</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="095e14f8-e440-4689-9151-c72382e11653">
+      <ID>保险缴纳</ID>
+      <Name>保险缴纳</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="7ccc5e46-6799-4b0b-9b79-d93fd0c761dd">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>保险缴纳</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b858ee98-bed1-4c20-a539-20322e32c5f2">
+      <ID>车辆情况</ID>
+      <Name>车辆情况</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="ef238c75-b7ec-463a-b962-82d103ef69c8">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>车辆情况</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7b220382-fc09-4de2-97a9-9b773215421f">
+      <ID>额度</ID>
+      <Name>额度</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="9ee3e58b-0b17-4016-b8be-f61097faad22">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>额度</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e70116e5-93a2-46e0-9f0f-c8705a065df2">
+      <ID>个人收入 连续</ID>
+      <Name>个人收入 连续</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="8cfea183-b5da-4e5d-a8dd-2de71446ea8f">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>个人收入 连续</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="623121d2-c898-439c-b198-7ee01e3d650d">
+      <ID>工作年限</ID>
+      <Name>工作年限</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="d0acce64-380a-4165-a65d-05042421cd14">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>工作年限</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b1c9997b-ccad-47e3-9a80-3c265012d2bc">
+      <ID>户籍</ID>
+      <Name>户籍</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="8150c693-502a-4dd9-9823-b8ae0f9a94da">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>户籍</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c55418a8-7170-444a-a113-478010cbd9db">
+      <ID>婚姻状态</ID>
+      <Name>婚姻状态</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="adf7a58d-553e-47fd-91d6-e40b917aaf28">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>婚姻状态</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f119def3-656d-4fa7-84e9-3103bf38a80b">
+      <ID>教育程度</ID>
+      <Name>教育程度</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="0daba29c-d186-4f8f-aec3-0f59ff85e49d">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>教育程度</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1c56ff84-345a-4420-8cc3-20a3f365508b">
+      <ID>居住类型</ID>
+      <Name>居住类型</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="e77f5adc-4523-46dc-81ae-2bf4ba9a18bd">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>居住类型</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="40d96e1b-60b6-4ab2-8442-559d0d5c93bd">
+      <ID>客户姓名</ID>
+      <Name>客户姓名</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="ab03ffe1-c236-48c2-b80e-e80a38029d45">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>客户姓名</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1c059611-5103-4f6e-9dbb-f02134cfaba7">
+      <ID>年龄 连续</ID>
+      <Name>年龄 连续</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="c3dafe52-a69b-4091-90ef-c7a46847aec2">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>年龄 连续</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="67a75662-876f-4cf8-ad4f-0fa1e3077689">
+      <ID>信用等级</ID>
+      <Name>信用等级</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="e53043d1-6e41-4ed0-b2b4-01bc7a899c2a">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>信用等级</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="685b1e2c-1dcd-4357-8941-ae0a7d258574">
+      <ID>信用总评分</ID>
+      <Name>信用总评分</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="3bf3b4ba-c596-43af-94c2-6a4f833122cf">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>信用总评分</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4112150d-22af-43d7-b61d-05e2df91782d">
+      <ID>性别</ID>
+      <Name>性别</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="62d60a7e-d29e-4d53-99d1-44d7dfb8caaf">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>性别</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e64eda44-63a9-4a97-837b-bb53021bb99c">
+      <ID>职业类别</ID>
+      <Name>职业类别</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="e5285fcc-c789-4a36-a4e0-5e56fe6831ce">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>职业类别</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="382b5a8d-16d5-4aa1-b183-c0ea47ee1006">
+      <ID>客户信用记录</ID>
+      <Name>客户信用记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="615ed087-ef14-474b-ad6b-3b1b19e263ff">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <SourceColumnID>客户号</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="5376e51f-ac94-43ae-972e-b5d75314910b">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <SourceColumnID>保险缴纳</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="304e85ab-dd31-4013-a1a5-13cacf3eaa0c">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <SourceColumnID>车辆情况</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="865a83e6-14d9-4472-ae5e-1e4188edbffc">
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <SourceColumnID>个人收入 连续</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="eee4b03d-7fe1-41c2-b1e5-45698e97f2b0">
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <SourceColumnID>工作年限</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="9edc8260-0336-4634-85de-2989000f6cfe">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <SourceColumnID>户籍</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4d89298d-8c34-470f-a925-41ca7c381764">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <SourceColumnID>婚姻状态</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a10af8e8-5074-408b-a7dd-15ee287aac5c">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <SourceColumnID>教育程度</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="01ff0ee6-49ba-4694-b99e-788d4f16a106">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <SourceColumnID>居住类型</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7ca3bd2e-199b-4eb6-ac7d-33ab9f5652ef">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <SourceColumnID>客户姓名</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="42e7fd1d-ab53-4bc6-8bd8-b778b6453858">
+          <ID>年龄 连续</ID>
+          <Name>年龄 连续</Name>
+          <SourceColumnID>年龄 连续</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e73c9ef2-22b7-4650-bc5c-e7c344d63b29">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <SourceColumnID>性别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="25582df0-bc62-4f81-b0b4-d8a681ec86ae">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <SourceColumnID>职业类别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2b500526-69a8-49e1-9668-2a0766abaf4c">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <SourceColumnID>信用等级</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="2f495695-f168-468c-b239-da7ef10d80fd">
+          <ID>信用总评分</ID>
+          <Name>信用总评分</Name>
+          <SourceColumnID>信用总评分</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="72a6b4d1-7554-4f9d-9d65-cf560070c3dd">
+      <ID>信用总评分关联模型</ID>
+      <Name>信用总评分关联模型</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Association_Rules</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="3ccb7245-be4f-47c5-a9aa-aea15117fd1f">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <SourceColumnID>客户号</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="9bc504d5-91ce-4b37-bcc7-75cb5b016195">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <SourceColumnID>保险缴纳</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3495570d-ab44-4208-8171-7ec56898cdc5">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <SourceColumnID>车辆情况</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="37eea37e-12ce-4ca3-9526-4fe846590f77">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <SourceColumnID>户籍</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3d021c40-37dc-4cf8-b66f-7d5e30afc6c9">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <SourceColumnID>婚姻状态</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a7041592-5d0d-418f-a753-41021ae574d5">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <SourceColumnID>教育程度</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="bca144c9-7439-4561-8e8c-e526a543f50c">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <SourceColumnID>居住类型</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="69e2d0e4-252b-45fb-8ba0-35ee62eec368">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <SourceColumnID>客户姓名</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="425fcdc5-0338-420c-9089-6ca751007139">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <SourceColumnID>性别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="09e34f54-93e7-4954-ac43-79382473cd56">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <SourceColumnID>职业类别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ee6fa5fa-b06d-428a-a97d-392c8e063712">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <SourceColumnID>信用等级</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="f84ea353-1b85-4dd6-9d29-52ba8cf38221">
+      <ID>逻辑回归</ID>
+      <Name>逻辑回归</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Logistic_Regression</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="c821eb86-f39c-4f89-89ee-fa3dd22d4868">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <SourceColumnID>客户号</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="16b05619-4d1b-4c93-949b-212007a37603">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <SourceColumnID>保险缴纳</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1c2b1258-2536-4698-b278-0d1f03d3f33d">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <SourceColumnID>车辆情况</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="265e772c-6132-4135-a164-d0db9ebb91ea">
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <SourceColumnID>个人收入 连续</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5bb6dfbd-1b45-4ba7-8bea-9b6dcef66b17">
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <SourceColumnID>工作年限</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ee79abcf-6e52-4d35-8a6f-5486dd2dde73">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <SourceColumnID>户籍</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e2345af1-68d7-4393-911e-c0de54594b76">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <SourceColumnID>婚姻状态</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9136cd43-2f10-421d-b12f-a5a2ccbea412">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <SourceColumnID>教育程度</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="79939838-c8a0-49b7-8510-aaf09d8dcf5e">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <SourceColumnID>居住类型</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1a65591d-51ea-4310-8788-3c54e5c13185">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <SourceColumnID>客户姓名</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c05687a1-bc5f-437f-8b1c-66f78830fca3">
+          <ID>年龄 连续</ID>
+          <Name>年龄 连续</Name>
+          <SourceColumnID>年龄 连续</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9340ea45-8cc7-4230-817b-9a30e48c8f04">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <SourceColumnID>性别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="56b95cd9-5298-483a-9a20-19e0248fe7b8">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <SourceColumnID>职业类别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="056ffc3d-64de-4c5e-a71d-9b1f0c2eab15">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <SourceColumnID>信用等级</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="8a12bbfc-357c-4cb6-8a88-ea393c21d0aa">
+          <ID>信用总评分</ID>
+          <Name>信用总评分</Name>
+          <SourceColumnID>信用总评分</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="7ec84c22-4cd5-4fc1-90b6-b4de25067e1e">
+      <ID>朴素贝叶斯</ID>
+      <Name>朴素贝叶斯</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="552d53c2-dfdf-4ef5-b49e-cc08d4e08f45">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <SourceColumnID>客户号</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="00d2562a-6760-4077-a730-d0fe961025de">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <SourceColumnID>保险缴纳</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c38d8d6a-3544-4f99-a0b5-05188cfb99ec">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <SourceColumnID>车辆情况</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7808c228-eb22-4760-acfb-c853a0a9dc1b">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <SourceColumnID>户籍</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a0039477-d8de-4a72-8d85-cb31b65a2290">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <SourceColumnID>婚姻状态</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3f64b67b-1d86-43a0-8fbe-f1e40bfa938c">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <SourceColumnID>教育程度</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="39c478f1-4470-418e-8b2b-7b2826be839d">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <SourceColumnID>居住类型</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a413c173-64d6-431f-a468-4e25c7520f7e">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <SourceColumnID>客户姓名</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="24041906-5991-4117-b852-e042635b2aa6">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <SourceColumnID>性别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a660282f-f7e4-4db5-bf94-2a7b419f1d64">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <SourceColumnID>职业类别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="55a2b0c9-efac-4918-94a2-3d819c9520f3">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <SourceColumnID>信用等级</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="cf0618b0-1064-46b5-818a-ed964270eb79">
+      <ID>关联规则</ID>
+      <Name>关联规则</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Association_Rules</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="1d4ea349-aee7-4b1f-98ee-5472059686fa">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <SourceColumnID>客户号</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="f9e748ae-61c7-4b56-b35b-203056f22443">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <SourceColumnID>保险缴纳</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="584038b4-468b-401f-b688-f5a519a5ab17">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <SourceColumnID>车辆情况</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3ba5d357-ee5e-4057-a18b-54241ee1836f">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <SourceColumnID>户籍</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="32c5cf89-2942-4d2e-8ffc-63784e74fd45">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <SourceColumnID>婚姻状态</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="28028e2f-752f-4adf-b98d-c33899355771">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <SourceColumnID>教育程度</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2f60afb5-f2ba-426b-b1aa-caecbdf71057">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <SourceColumnID>居住类型</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="43fdd8ff-76a2-4eeb-8116-504303a1eeef">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <SourceColumnID>客户姓名</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1073be50-32f2-412c-8e9e-7358d214ccac">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <SourceColumnID>性别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d23509e6-97e5-4e36-b44d-98311009e4ea">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <SourceColumnID>职业类别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cb3ee2d7-2f35-439e-bec3-4148d471d9cf">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <SourceColumnID>信用等级</SourceColumnID>
+          <Usage>Predict</Usage>
+        </Column>
+        <Column dwd:design-time-name="06388704-e594-4a64-8ea3-4c800cfacbb5">
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <SourceColumnID>额度</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>
