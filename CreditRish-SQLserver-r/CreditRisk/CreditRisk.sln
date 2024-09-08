@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34931.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "CreditRisk", "CreditRisk\CreditRisk.dwproj", "{0CCA49DA-3CB9-45F5-B458-A0DF06504FA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CCA49DA-3CB9-45F5-B458-A0DF06504FA5}.Development|Default.ActiveCfg = Development
+		{0CCA49DA-3CB9-45F5-B458-A0DF06504FA5}.Development|Default.Build.0 = Development
+		{0CCA49DA-3CB9-45F5-B458-A0DF06504FA5}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {062EDB7C-976D-4586-A426-D7195A0E5BCE}
+	EndGlobalSection
+EndGlobal

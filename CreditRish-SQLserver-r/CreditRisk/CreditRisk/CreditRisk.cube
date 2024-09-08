@@ -1,0 +1,603 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1ddfe1f2-ef84-4fe5-9a25-c9f0c563bef3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CreditRisk</ID>
+  <Name>CreditRisk</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="7" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-16296" scrolltop="248" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="23262" y="11240" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="018600009001905f010004cbcecce5" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="拖欠历史记录$" left="-15976" top="1474" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_拖欠历史记录$" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="消费历史记录$" left="-8082" top="8487" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3450" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00007a0d0000da120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_消费历史记录$" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="申请客户信息$" left="10806" top="8414" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_申请客户信息$" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="客户信用记录$" left="-14034" top="5481" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3027" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000d30b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_客户信用记录$" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-13276" top="1794" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3069" height="4707" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[拖欠历史记录$-客户信用记录$]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="4" destid="1" sourceattachpoint="282" destattachpoint="184" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-11007" y="6101" />
+              <point x="-10507" y="6101" />
+              <point x="-12476" y="2094" />
+              <point x="-12976" y="2094" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="-11307" top="5702" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3525" height="3705" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[消费历史记录$-客户信用记录$]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Oblique" sourceid="4" destid="2" sourceattachpoint="282" destattachpoint="31" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="-11007" y="6101" />
+              <point x="-10507" y="6101" />
+              <point x="-8582" y="9107" />
+              <point x="-8082" y="9107" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-16296</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>248</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-15976</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>1474</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="08681c3e-9268-4cd4-b741-2d236406d257">
+      <ID>拖欠历史记录</ID>
+      <Name>拖欠历史记录</Name>
+      <DimensionID>拖欠历史记录</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ccafef4a-f4f9-417d-a998-ba799d206a87">
+          <AttributeID>客户号</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c35be9fd-19dd-4614-bdf9-02c3d88050c9">
+          <AttributeID>卡号</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d0ede47-0543-4dce-a2e4-b05929824626">
+          <AttributeID>额度</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f8591fdf-7346-4176-b56d-947bd1facc67">
+          <AttributeID>拖欠标识</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="06d67df0-1619-48d8-a63e-6acbbe813a24">
+          <AttributeID>拖欠总金额</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f876be8-8959-4fd6-912d-28b90f1fb6ce">
+          <AttributeID>逾期天数</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="000fe3d5-5d74-4b85-a29d-d109cc52994a">
+      <ID>客户信用记录</ID>
+      <Name>客户信用记录</Name>
+      <DimensionID>客户信用记录</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c8397ee3-9781-4613-a1fc-715cb7e858d2">
+          <AttributeID>客户号</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="84231b17-5ccc-481f-8aba-d5be64fe80e0">
+          <AttributeID>客户姓名</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="686b5ec1-ff7c-4c47-9989-9c33edc6bbff">
+          <AttributeID>性别</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5480fec5-1459-4a0e-b353-779f9e01eca4">
+          <AttributeID>年龄 连续</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c685624-8dd2-4a33-a15f-ec5f5a190081">
+          <AttributeID>婚姻状态</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8490fa23-e569-4993-947a-79b93c8bda95">
+          <AttributeID>户籍</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="62cd39a8-0e1d-4846-85fc-170bcba3914f">
+          <AttributeID>教育程度</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e59fef5-ae98-4ceb-9730-5240cbb5b0ac">
+          <AttributeID>居住类型</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9f6c76a6-7986-4b26-aa92-9c78bc1cf6c0">
+          <AttributeID>职业类别</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7732e9d8-f565-4bb4-8799-e91fce8683bf">
+          <AttributeID>工作年限</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ab03ffab-10d6-4cea-b6f4-3812dfa82b87">
+          <AttributeID>个人收入 连续</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="01837b3c-cd35-4409-9ac3-64c1d7627385">
+          <AttributeID>保险缴纳</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="32503636-8897-4c82-9f11-92f127ed32f8">
+          <AttributeID>车辆情况</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc284e96-4bff-4fe1-be70-7e7f6ed40f3c">
+          <AttributeID>信用总评分</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd33e080-8113-4e5e-87a0-3fc8fe8b124a">
+          <AttributeID>信用等级</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d137c67d-4325-4cb1-b315-272378e31efc">
+          <AttributeID>额度</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d7e90da-7740-4035-a4b4-824b0df7a15c">
+          <AttributeID>审批结果</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d956412d-c5e7-4778-8394-c093a290e3c9">
+      <ID>消费历史记录</ID>
+      <Name>消费历史记录</Name>
+      <DimensionID>消费历史记录</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a595ba05-8fcd-4c7e-89c0-17d4e1c9ecdf">
+          <AttributeID>客户号</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02a4aca6-0024-435c-985e-ec05b46c5a13">
+          <AttributeID>卡号</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b188674-a301-4865-adb5-709ec8bbc38d">
+          <AttributeID>卡类别</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0c2c601-6834-4eed-bacf-3997c131fba9">
+          <AttributeID>币种代码</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8384285b-4058-450f-8ce8-b05861dd306d">
+          <AttributeID>额度</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="56512dd4-3181-4c0b-ae25-05ac81bba30c">
+          <AttributeID>日均消费金额</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="43fa3e4d-dfc1-45f5-baff-f75ddedcdc4c">
+          <AttributeID>日均次数</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c55ffcfb-1678-41bf-975e-eca116982de7">
+          <AttributeID>单笔消费最小金额</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e74d8aa-6892-4756-bc44-fdccdd94a0ca">
+          <AttributeID>单笔消费最大金额</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="564fdb0f-9505-4f74-9c54-0056ef2be1c9">
+          <AttributeID>个人收入 连续</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="976184c3-c8b9-47fb-9950-4f42779585a3">
+          <AttributeID>是否存在欺诈</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1fbdd8f7-f926-48dd-8613-e19568ca5522">
+      <ID>申请客户信息</ID>
+      <Name>申请客户信息</Name>
+      <DimensionID>申请客户信息</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="42e4a158-c7e1-4652-9ccc-2c0d866620b3">
+          <AttributeID>客户号</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="9fac04d1-8659-4c48-ad77-5b5af1f3b7b2">
+      <ID>拖欠历史记录</ID>
+      <Name>拖欠历史记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="f9fe5338-3309-4c56-b671-60dd2cad810a">
+          <ID>额度 - 拖欠历史记录</ID>
+          <Name>额度 - 拖欠历史记录</Name>
+          <Source dwd:design-time-name="7776fc65-e191-4ed2-94a2-5659a1b995b2">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="c6d10202-67c4-4886-aa53-f5894a35283d">
+              <TableID>dbo_拖欠历史记录_x0024_</TableID>
+              <ColumnID>额度</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f2b857f6-d6b0-4cc0-9265-32e748c1e438">
+          <ID>拖欠标识</ID>
+          <Name>拖欠标识</Name>
+          <Source dwd:design-time-name="98329fff-7f4e-4bd7-b03c-9edba853e588">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="28f79309-72b9-4dae-b8b9-a0fc3c11b5fa">
+              <TableID>dbo_拖欠历史记录_x0024_</TableID>
+              <ColumnID>拖欠标识</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2b18fa4e-43f4-45be-9018-46b4f8cd2721">
+          <ID>拖欠总金额</ID>
+          <Name>拖欠总金额</Name>
+          <Source dwd:design-time-name="fb1fbe81-b413-46e6-8c92-fa0862132512">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5f780295-eafa-4143-83a3-dbb1258f0d31">
+              <TableID>dbo_拖欠历史记录_x0024_</TableID>
+              <ColumnID>拖欠总金额</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1b2f17b9-fd7c-4a0d-a205-e91ec9dee38d">
+          <ID>逾期天数</ID>
+          <Name>逾期天数</Name>
+          <Source dwd:design-time-name="2c1f4073-ee29-49c6-bc79-119c3504aeba">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f3e4e807-d927-43eb-8a48-9bc3c96c8c43">
+              <TableID>dbo_拖欠历史记录_x0024_</TableID>
+              <ColumnID>逾期天数</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6799e0c0-8b61-462d-ac7e-5073e4186632">
+          <ID>拖欠历史记录 计数</ID>
+          <Name>拖欠历史记录 计数</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="225d18d0-bd30-4f07-b77e-a00ea5ae0324">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="c6387b28-a809-4928-a948-f8e141e94e2a">
+              <TableID>dbo_拖欠历史记录_x0024_</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="2ec9eafd-d42c-4236-9b53-0d159310294d">
+          <CubeDimensionID>拖欠历史记录</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d7aad1a6-e9a1-40bd-aff9-9eb229bc0691">
+              <AttributeID>客户号</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b707f2c5-df12-49dc-b194-d1966fc6518b">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0ed830ef-e623-4dca-97c8-7ec465dbb690">
+                    <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                    <ColumnID>客户号</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4a8e3338-cfe2-47cd-b20d-2f9dc4e2d29b">
+          <CubeDimensionID>客户信用记录</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="21d363d3-92ac-4ab2-ad59-bcd548bd98ff">
+              <AttributeID>客户号</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8ff59273-a494-487b-9346-a4341578f032">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3e1a2b09-5bc6-4164-bc41-8b4950b6feb8">
+                    <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                    <ColumnID>客户号</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="c110be97-7bc1-4df9-84d8-08477f48b193">
+      <ID>消费历史记录</ID>
+      <Name>消费历史记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="0ea70a27-5f57-4e9d-a7da-a741abe5e9e8">
+          <ID>额度 - 消费历史记录</ID>
+          <Name>额度 - 消费历史记录</Name>
+          <Source dwd:design-time-name="18204d2e-a60b-4f8f-88c1-1e38aca765f3">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="48f9db17-80fa-48dc-a6a3-3bd7208b287a">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>额度</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="aa058e41-0921-42cc-8b32-7a105deb13c3">
+          <ID>日均消费金额</ID>
+          <Name>日均消费金额</Name>
+          <Source dwd:design-time-name="58c7ef2f-a0e6-401d-a19f-9ce33cb563ef">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cd99cbee-336b-4fb3-a479-52ac55fe1617">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>日均消费金额</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6d8b28cf-370f-472f-8260-69de38916328">
+          <ID>日均次数</ID>
+          <Name>日均次数</Name>
+          <Source dwd:design-time-name="36f759e1-09c4-418b-9ca7-b7372f808702">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="0e20e91f-556a-4f9f-817d-53874d2f9843">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>日均次数</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="74140867-66a2-4c20-9654-a10230e46551">
+          <ID>单笔消费最小金额</ID>
+          <Name>单笔消费最小金额</Name>
+          <Source dwd:design-time-name="6bf9dc24-85de-46d8-9351-612938d6afb8">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="3475589e-fbdf-48e8-bce2-c9c2c173e981">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>单笔消费最小金额</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="e3ff8fb9-985e-47d5-bc17-892f9e8d8796">
+          <ID>单笔消费最大金额</ID>
+          <Name>单笔消费最大金额</Name>
+          <Source dwd:design-time-name="7492c0ad-3495-4ab6-87aa-29a82ca7c693">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="decac4c2-6787-4857-a472-1cd347ccbc52">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>单笔消费最大金额</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2a19abdd-f8d0-4509-9d9e-ccea0f4a1001">
+          <ID>个人收入 连续 - 消费历史记录</ID>
+          <Name>个人收入 连续 - 消费历史记录</Name>
+          <Source dwd:design-time-name="b55e8fa5-ac06-4628-a399-396cff9369ac">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="55756d2c-4a27-47ee-a93c-36eb7551fc62">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>个人收入_连续</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="621067ac-71f2-469d-a202-887f10167c1e">
+          <ID>是否存在欺诈</ID>
+          <Name>是否存在欺诈</Name>
+          <Source dwd:design-time-name="bb1b0331-bdb8-41f4-8bff-0ef28243aac0">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ecb4496e-d23c-4fa7-9b77-a14095fd534b">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+              <ColumnID>是否存在欺诈</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="54c04a69-a8c7-4c62-9321-c978d5b051f7">
+          <ID>消费历史记录 计数</ID>
+          <Name>消费历史记录 计数</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="46e8e6c0-efe7-4695-955e-46bf9934f117">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="a33f12e1-4d1c-464c-882f-175a2790a43b">
+              <TableID>dbo_消费历史记录_x0024_</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5b8ee42d-150e-4783-b0d7-dae5c9eea730">
+          <CubeDimensionID>消费历史记录</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c3b4218f-49b5-4e01-8663-32fd41ceed01">
+              <AttributeID>客户号</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="94e22fa9-4ff2-4cee-9965-9b7d3ba97b9a">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="df42bcc9-a9cc-49e1-b186-e725c1e9a3eb">
+                    <TableID>dbo_消费历史记录_x0024_</TableID>
+                    <ColumnID>客户号</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="79d0cebd-5367-4bc4-8e76-0b28508b5547">
+          <CubeDimensionID>客户信用记录</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="77a0199b-bd5c-47a2-a43f-ed06a25a220d">
+              <AttributeID>客户号</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="45064e4e-f1ec-4b0f-a4f1-0d4dd53747d7">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a22b3a2e-d67d-410f-a27e-f8a1f595922e">
+                    <TableID>dbo_消费历史记录_x0024_</TableID>
+                    <ColumnID>客户号</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="d389ed4e-0103-4562-9eaf-d8a3630c7c45">
+      <ID>申请客户信息</ID>
+      <Name>申请客户信息</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="88258d7c-d0a2-4be3-b848-29201e42293d">
+          <ID>年龄</ID>
+          <Name>年龄</Name>
+          <Source dwd:design-time-name="dafdb0ac-95ae-440c-b116-8d407e2bd0ae">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="06c387af-5a65-4895-991b-45fae901dc86">
+              <TableID>dbo_申请客户信息_x0024_</TableID>
+              <ColumnID>年龄</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="803b8e86-a462-4da6-a993-02610d4e9d27">
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <Source dwd:design-time-name="03d8fd63-28f1-46b0-a01b-a07ae4d8c2c8">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ed01c0c4-2638-4f43-874b-49a46253a457">
+              <TableID>dbo_申请客户信息_x0024_</TableID>
+              <ColumnID>工作年限</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="5bac658d-23aa-4117-956a-09d4c37a0db5">
+          <ID>申请客户信息 计数</ID>
+          <Name>申请客户信息 计数</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="9d618a62-111c-4e63-9f92-3bd31afc29de">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="e2fced18-474d-495e-a3fa-d497da0821f7">
+              <TableID>dbo_申请客户信息_x0024_</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="fa81bce2-14ae-4996-8129-737c1300c773">
+          <CubeDimensionID>申请客户信息</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="48617654-58c5-4251-abec-de61dbb8332b">
+              <AttributeID>客户号</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d18b287b-7154-4942-a005-aeb64f6a16cd">
+                  <DataType>WChar</DataType>
+                  <DataSize>255</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bb161378-f8b1-4cb5-8c4e-d32bb219dfe3">
+                    <TableID>dbo_申请客户信息_x0024_</TableID>
+                    <ColumnID>客户号</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="2c3ba058-6df8-4bb6-9399-f1cd58e846d2">
+    <DataSourceViewID>CreditRisk</DataSourceViewID>
+  </Source>
+</Cube>

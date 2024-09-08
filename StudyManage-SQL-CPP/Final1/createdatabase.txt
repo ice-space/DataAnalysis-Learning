@@ -1,0 +1,78 @@
+CREATE TABLE College (
+    College_Code INT PRIMARY KEY COMMENT '学院代码',
+    College_Name VARCHAR(100) NOT NULL UNIQUE COMMENT '学院名称'
+) COMMENT '学院表';
+
+CREATE TABLE Major (
+    Major_Code INT PRIMARY KEY COMMENT '专业代码',
+    Major_Name VARCHAR(100) NOT NULL UNIQUE COMMENT '专业名称',
+    College_Name VARCHAR(100),
+    FOREIGN KEY (College_Name) REFERENCES College(College_Name)
+) COMMENT '专业表';
+
+CREATE TABLE Class (
+    Class_ID INT PRIMARY KEY COMMENT '班级号',
+    Grade INT NOT NULL COMMENT '年级',
+    Student_Count INT COMMENT '学生人数',
+    Major_Name VARCHAR(100),
+    FOREIGN KEY (Major_Name) REFERENCES Major(Major_Name)
+) COMMENT '班级表';
+
+CREATE TABLE Teacher (
+    Teacher_ID INT PRIMARY KEY COMMENT '工号',
+    Name VARCHAR(100) NOT NULL COMMENT '姓名',
+    Gender CHAR(1) COMMENT '性别',
+    Contact VARCHAR(100) COMMENT '联系方式',
+    Address VARCHAR(255) COMMENT '地址',
+    Department VARCHAR(100),
+    FOREIGN KEY (Department) REFERENCES Major(Major_Name)
+) COMMENT '教师表';
+
+CREATE TABLE Course (
+    Course_Code INT PRIMARY KEY COMMENT '课程代码',
+    Course_Name VARCHAR(100) NOT NULL COMMENT '课程名',
+    Credits INT NOT NULL COMMENT '学分',
+    Teacher_ID INT,
+    FOREIGN KEY (Teacher_ID) REFERENCES Teacher(Teacher_ID)
+) COMMENT '课程表';
+
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY COMMENT '学号',
+    Name VARCHAR(100) NOT NULL COMMENT '姓名',
+    Gender CHAR(1) COMMENT '性别',
+    Class_ID INT,
+    Major_Name VARCHAR(100),
+    FOREIGN KEY (Class_ID) REFERENCES Class(Class_ID)
+) COMMENT '学生表';
+
+CREATE TABLE Enrollment (
+    Course_Code INT COMMENT '课程代码',
+    Student_ID INT COMMENT '学号',
+    Grade DECIMAL(5, 2) COMMENT '成绩',
+    PRIMARY KEY (Course_Code, Student_ID),
+    FOREIGN KEY (Course_Code) REFERENCES Course(Course_Code),
+    FOREIGN KEY (Student_ID) REFERENCES Student(Student_ID),
+    CHECK (Grade >= 0.00 AND Grade <= 100.00)
+) COMMENT '选课表';
+
+CREATE TABLE RoleType (
+    Role_Name ENUM('admin', 'teacher', 'student') PRIMARY KEY COMMENT '角色名称',
+    Description VARCHAR(255) COMMENT '角色描述'
+) COMMENT '角色类型表';
+
+CREATE TABLE User (
+    User_ID INT AUTO_INCREMENT PRIMARY KEY COMMENT '用户ID',
+    Username VARCHAR(100) NOT NULL UNIQUE COMMENT '用户名',
+    Password VARCHAR(255) NOT NULL COMMENT '密码',
+    Role ENUM('admin', 'teacher', 'student') NOT NULL COMMENT '角色',
+    Name VARCHAR(100) COMMENT '姓名',
+    FOREIGN KEY (Role) REFERENCES RoleType(Role_Name)
+) COMMENT '用户表';
+
+INSERT INTO RoleType (Role_Name, Description) VALUES
+('admin', '系统管理员，具有最高权限，包括管理用户、教师、学生及其他所有数据'),
+('teacher', '教师，能够查询和管理与自己相关的课程和选课信息'),
+('student', '学生，能够查询自己的课程信息和选课信息');
+
+INSERT INTO User (Username, Password, Role) VALUES
+('admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', (SELECT Role_Name FROM RoleType WHERE Role_Name = 'admin'));

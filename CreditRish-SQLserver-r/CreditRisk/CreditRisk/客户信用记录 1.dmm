@@ -1,0 +1,605 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="2c56afcd-3110-4f76-8ed5-9348c9ba22ae" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>客户信用记录 1</ID>
+  <Name>客户信用记录 1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>MDXFilterComponent</Name>
+      <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition" /&gt;&lt;/Filter&gt;</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="CubeDimensionBinding" dwd:design-time-name="d91195b1-8201-458e-8c80-fa249da95332">
+    <DataSourceID>.</DataSourceID>
+    <CubeID>CreditRisk</CubeID>
+    <CubeDimensionID>客户信用记录</CubeDimensionID>
+    <Filter></Filter>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="71bd4ca5-d438-47b0-aef1-2df6cc966eb7">
+      <ID>客户号</ID>
+      <Name>客户号</Name>
+      <IsKey>true</IsKey>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="b2240f40-bbc8-458c-bd53-e0db688a8ce4">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>客户号</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Key</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ffa8bc92-48bb-49b7-b6b7-253524cd1fee">
+      <ID>保险缴纳</ID>
+      <Name>保险缴纳</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="e29162a3-dfd5-47bc-b7ea-3bc1d6983471">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>保险缴纳</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c5887c6e-2ded-44dd-8d07-abbe310e2566">
+      <ID>车辆情况</ID>
+      <Name>车辆情况</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="52af5d65-e8c7-4be6-bbe2-0fa64f5e5b10">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>车辆情况</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2dc204a5-de2b-4811-9b2c-4a7bf5649db9">
+      <ID>额度</ID>
+      <Name>额度</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="92246649-9022-42c9-85dc-d62c485e885a">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>额度</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="986a16c0-18a0-4302-aebe-fb725dc776f4">
+      <ID>个人收入 连续</ID>
+      <Name>个人收入 连续</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="4d36e90b-8a18-461d-96e9-5a1f18089387">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>个人收入 连续</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="60a903b3-d7bf-4ead-9e0c-dd21470ad12f">
+      <ID>工作年限</ID>
+      <Name>工作年限</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="231e2cba-638e-4820-84c6-d2c77c69d54d">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>工作年限</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d1d32cae-b06f-4485-8bcb-c2f315717660">
+      <ID>户籍</ID>
+      <Name>户籍</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="0a32bc7e-4da8-4e04-8c4f-95dcb7f13332">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>户籍</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cc23e5ae-9894-4ac4-b0ae-82afdc2a72b7">
+      <ID>婚姻状态</ID>
+      <Name>婚姻状态</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="cd28e0b8-ec5a-4d8e-90f6-973027a5a964">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>婚姻状态</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0be4e179-598e-4b07-9cb6-e5e3fc56475d">
+      <ID>教育程度</ID>
+      <Name>教育程度</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="02b3d306-fe55-4538-9e45-d9602ba5c7b4">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>教育程度</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="6263f026-8d26-4579-94d3-d23013fa0fb8">
+      <ID>居住类型</ID>
+      <Name>居住类型</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="8420a08d-7193-417f-88de-bd36cf659b65">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>居住类型</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e0ee1ca9-49c3-48f1-a8f4-88b509b73390">
+      <ID>客户姓名</ID>
+      <Name>客户姓名</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="590acf90-4ea8-48fb-a34f-2153d7be1f74">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>客户姓名</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f7b883e1-7f0b-482b-8da8-d6633bd2e8ac">
+      <ID>年龄 连续</ID>
+      <Name>年龄 连续</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="4229e843-020c-4b66-9118-c70b4c78c0a4">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>年龄 连续</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d7f70e1f-668d-4d6e-8707-984f7a2b5951">
+      <ID>审批结果</ID>
+      <Name>审批结果</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="41eceee2-313c-43f5-9f13-e87a5b4c7b72">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>审批结果</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1477d23d-76cc-4ac9-9fea-8b1f004d08a8">
+      <ID>信用等级</ID>
+      <Name>信用等级</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="47cbe94b-c52b-4515-8cb3-4f142be20438">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>信用等级</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4d36735a-7670-4992-b209-c9787c24accf">
+      <ID>信用总评分</ID>
+      <Name>信用总评分</Name>
+      <Type>Double</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="20da903e-0fbc-4582-bed3-94ea3e047ed3">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>信用总评分</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="581b033c-2940-46fb-b1c1-3ba9dfa5f43b">
+      <ID>性别</ID>
+      <Name>性别</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="e83d826d-f8b8-493d-af4f-9e1c203f76d3">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>性别</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ca8efde1-3c85-46ae-97fe-8a0986aa8321">
+      <ID>职业类别</ID>
+      <Name>职业类别</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="078687da-c474-4824-b934-cc2fef0c91fa">
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <AttributeID>职业类别</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="b87db354-af40-4398-b079-eb3772d5bdd5">
+      <ID>单笔消费最大金额</ID>
+      <Name>单笔消费最大金额</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="3b03a760-0006-4875-9209-cc926b423362">
+        <MeasureID>单笔消费最大金额</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="93ddb0c1-90aa-409b-8672-e1232bab2c7a">
+      <ID>单笔消费最小金额</ID>
+      <Name>单笔消费最小金额</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="d8f247e2-1632-4b8d-a5f6-e8637b7ee1ed">
+        <MeasureID>单笔消费最小金额</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a38ddcf0-73fd-49b6-862c-28bfa09aa599">
+      <ID>额度 - 拖欠历史记录</ID>
+      <Name>额度 - 拖欠历史记录</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="80605482-7685-4193-82e4-e1d71363c533">
+        <MeasureID>额度 - 拖欠历史记录</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1e182a5d-ec75-4b80-a20c-2c8175bbe651">
+      <ID>额度 - 消费历史记录</ID>
+      <Name>额度 - 消费历史记录</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="089acd4c-6d97-4ab8-9ff2-ea9b6ee04ee5">
+        <MeasureID>额度 - 消费历史记录</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="13cda8d6-71e3-4c59-b118-44a82c77cc30">
+      <ID>个人收入 连续 - 消费历史记录</ID>
+      <Name>个人收入 连续 - 消费历史记录</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="2d62ece3-f012-4eb8-8db9-81417238f422">
+        <MeasureID>个人收入 连续 - 消费历史记录</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="677f78e3-f71e-4932-83a1-67da40199e29">
+      <ID>日均次数</ID>
+      <Name>日均次数</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="641cfd32-f70a-49ea-8f46-f44f25ddbfdc">
+        <MeasureID>日均次数</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ea65a6a3-3598-428c-9959-b11a91e45796">
+      <ID>日均消费金额</ID>
+      <Name>日均消费金额</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="35de4bdc-f380-4fdb-bc86-409e206741a0">
+        <MeasureID>日均消费金额</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="0ca83030-63e2-4f44-9f49-83bcc3fdb047">
+      <ID>是否存在欺诈</ID>
+      <Name>是否存在欺诈</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="9d82acb0-ff67-44d9-8a73-4745fbee0630">
+        <MeasureID>是否存在欺诈</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="85fd0ab8-b843-4fd9-97d5-9220b3e6ba28">
+      <ID>拖欠标识</ID>
+      <Name>拖欠标识</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="12fc2eb6-fcd1-48f5-990c-69f8543fea63">
+        <MeasureID>拖欠标识</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e0dc38f9-9f29-4999-b8bf-c995c11641e4">
+      <ID>拖欠历史记录 计数</ID>
+      <Name>拖欠历史记录 计数</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="f970ceca-ae08-4c92-8cb7-a8b2c729cfc1">
+        <MeasureID>拖欠历史记录 计数</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9276830a-60ae-4536-bb46-2d46819925de">
+      <ID>拖欠总金额</ID>
+      <Name>拖欠总金额</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="83ebc95b-4d60-431f-9631-dcda64995a69">
+        <MeasureID>拖欠总金额</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="46f9edd4-ea57-43cc-aad0-be8489a0b14b">
+      <ID>消费历史记录 计数</ID>
+      <Name>消费历史记录 计数</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="de1c9fa3-6235-45fc-ab9d-01714cca3753">
+        <MeasureID>消费历史记录 计数</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="02290fee-dbb1-45ad-91d4-fadb5acccdf9">
+      <ID>逾期天数</ID>
+      <Name>逾期天数</Name>
+      <Type>Double</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="3217a552-39e5-4b0d-84a2-4b0e974dc207">
+        <MeasureID>逾期天数</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="6c2893cc-7591-478d-b3ed-67759d9b1d31">
+      <ID>客户信用记录 1</ID>
+      <Name>客户信用记录 1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="baad1124-707c-44f0-adc2-46ce5cfd113a">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <SourceColumnID>客户号</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="774438db-bbe5-46d0-8f81-409beb60b743">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <SourceColumnID>保险缴纳</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f02328ea-08ef-4533-ad8a-88356dc9202a">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <SourceColumnID>车辆情况</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2a712630-1787-4687-8147-a8e1b8bb9959">
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <SourceColumnID>额度</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="5994a51e-5932-4f5d-b012-4d51754bd807">
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <SourceColumnID>个人收入 连续</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="2e5467b4-d796-492d-9153-6bb0739ef15f">
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <SourceColumnID>工作年限</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="b2ad1f6f-8f2e-4af4-b80b-dccbfdbdbe19">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <SourceColumnID>户籍</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1a3f532e-c303-401d-83e3-d9449c1a3300">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <SourceColumnID>婚姻状态</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3de74e44-bdad-4cdc-8d3e-9df1bba662b2">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <SourceColumnID>教育程度</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4c1b81b5-0139-422b-ac59-548c65a6588c">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <SourceColumnID>居住类型</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0bbb3719-56db-4707-8362-e358c068b354">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <SourceColumnID>客户姓名</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9278f006-dfa6-4a26-9524-7ce993de916b">
+          <ID>年龄 连续</ID>
+          <Name>年龄 连续</Name>
+          <SourceColumnID>年龄 连续</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="489c483c-4fb3-40f9-9eb1-cc46cc80a46c">
+          <ID>审批结果</ID>
+          <Name>审批结果</Name>
+          <SourceColumnID>审批结果</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="95d60643-b792-40bf-9b9c-08a46ffb116f">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <SourceColumnID>信用等级</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="fc461d9c-8b0b-4a8f-9812-612f9dac4f9a">
+          <ID>信用总评分</ID>
+          <Name>信用总评分</Name>
+          <SourceColumnID>信用总评分</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="c2a1807a-cd44-4d4c-a07b-8d9c2ca4ded7">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <SourceColumnID>性别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6f1950fc-b951-4f89-99a9-0ee34b30f164">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <SourceColumnID>职业类别</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="01b9806e-31e5-40e8-bdb6-232499abc5db">
+          <ID>单笔消费最大金额</ID>
+          <Name>单笔消费最大金额</Name>
+          <SourceColumnID>单笔消费最大金额</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="0bdc68af-306f-4292-b307-40d84c49b895">
+          <ID>单笔消费最小金额</ID>
+          <Name>单笔消费最小金额</Name>
+          <SourceColumnID>单笔消费最小金额</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="d3137ea0-5f1b-4021-b284-2ef7bfc91489">
+          <ID>额度 - 拖欠历史记录</ID>
+          <Name>额度 - 拖欠历史记录</Name>
+          <SourceColumnID>额度 - 拖欠历史记录</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e5d07250-2cb2-402f-b4e0-95f8f4efa3f8">
+          <ID>额度 - 消费历史记录</ID>
+          <Name>额度 - 消费历史记录</Name>
+          <SourceColumnID>额度 - 消费历史记录</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="988f0ec3-65a6-46f6-845d-db093cc354bc">
+          <ID>个人收入 连续 - 消费历史记录</ID>
+          <Name>个人收入 连续 - 消费历史记录</Name>
+          <SourceColumnID>个人收入 连续 - 消费历史记录</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="ecd2ebd2-9e94-41ef-8bf3-0937e508a1a8">
+          <ID>日均次数</ID>
+          <Name>日均次数</Name>
+          <SourceColumnID>日均次数</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="1fd252f0-5c0a-41a7-b4f8-0e066cc3c321">
+          <ID>日均消费金额</ID>
+          <Name>日均消费金额</Name>
+          <SourceColumnID>日均消费金额</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="5ebe932b-d603-4988-a94e-f218dc3e90e5">
+          <ID>是否存在欺诈</ID>
+          <Name>是否存在欺诈</Name>
+          <SourceColumnID>是否存在欺诈</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="1a1ef8c3-4813-4f03-ac70-ce9589645eb4">
+          <ID>拖欠标识</ID>
+          <Name>拖欠标识</Name>
+          <SourceColumnID>拖欠标识</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="2729cdeb-c686-44cb-8118-d4b7d0e56379">
+          <ID>拖欠历史记录 计数</ID>
+          <Name>拖欠历史记录 计数</Name>
+          <SourceColumnID>拖欠历史记录 计数</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="754a2385-0faf-48fd-998c-e6e7b2d249f9">
+          <ID>拖欠总金额</ID>
+          <Name>拖欠总金额</Name>
+          <SourceColumnID>拖欠总金额</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="324ee61b-2a50-4ba9-94fe-94b1fa4bad63">
+          <ID>消费历史记录 计数</ID>
+          <Name>消费历史记录 计数</Name>
+          <SourceColumnID>消费历史记录 计数</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="8493058a-7b3d-4ea5-aa0c-b9820d18ec73">
+          <ID>逾期天数</ID>
+          <Name>逾期天数</Name>
+          <SourceColumnID>逾期天数</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>10</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

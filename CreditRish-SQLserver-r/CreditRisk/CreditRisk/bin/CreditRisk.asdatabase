@@ -1,0 +1,3245 @@
+﻿<Database xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CreditRisk</ID>
+  <Name>CreditRisk</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <LastUpdate>0001-01-01T00:00:00Z</LastUpdate>
+  <DataSourceImpersonationInfo>
+    <ImpersonationMode>Default</ImpersonationMode>
+    <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+  </DataSourceImpersonationInfo>
+  <Dimensions>
+    <Dimension>
+      <ID>客户信用记录</ID>
+      <Name>客户信用记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>CreditRisk</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>客户号</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>客户姓名</AttributeID>
+              <Name>客户姓名</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>性别</AttributeID>
+              <Name>性别</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>年龄 连续</AttributeID>
+              <Name>年龄 连续</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>婚姻状态</AttributeID>
+              <Name>婚姻状态</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>户籍</AttributeID>
+              <Name>户籍</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>教育程度</AttributeID>
+              <Name>教育程度</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>居住类型</AttributeID>
+              <Name>居住类型</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>职业类别</AttributeID>
+              <Name>职业类别</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>工作年限</AttributeID>
+              <Name>工作年限</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>个人收入 连续</AttributeID>
+              <Name>个人收入 连续</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>保险缴纳</AttributeID>
+              <Name>保险缴纳</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>车辆情况</AttributeID>
+              <Name>车辆情况</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>信用总评分</AttributeID>
+              <Name>信用总评分</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>信用等级</AttributeID>
+              <Name>信用等级</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>额度</AttributeID>
+              <Name>额度</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>审批结果</AttributeID>
+              <Name>审批结果</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>客户姓名</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>性别</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>年龄 连续</ID>
+          <Name>年龄 连续</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>年龄_连续</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>婚姻状态</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>户籍</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>教育程度</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>居住类型</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>职业类别</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>工作年限</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>个人收入_连续</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>保险缴纳</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>车辆情况</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>信用总评分</ID>
+          <Name>信用总评分</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>信用总评分</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>信用等级</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>额度</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>审批结果</ID>
+          <Name>审批结果</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_客户信用记录_x0024_</TableID>
+                <ColumnID>审批结果</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>拖欠历史记录</ID>
+      <Name>拖欠历史记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>CreditRisk</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                <ColumnID>客户号</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>卡号</AttributeID>
+              <Name>卡号</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>额度</AttributeID>
+              <Name>额度</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>拖欠标识</AttributeID>
+              <Name>拖欠标识</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>拖欠总金额</AttributeID>
+              <Name>拖欠总金额</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>逾期天数</AttributeID>
+              <Name>逾期天数</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>卡号</ID>
+          <Name>卡号</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                <ColumnID>卡号</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                <ColumnID>额度</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>拖欠标识</ID>
+          <Name>拖欠标识</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                <ColumnID>拖欠标识</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>拖欠总金额</ID>
+          <Name>拖欠总金额</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                <ColumnID>拖欠总金额</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>逾期天数</ID>
+          <Name>逾期天数</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                <ColumnID>逾期天数</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>消费历史记录</ID>
+      <Name>消费历史记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>CreditRisk</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>客户号</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>卡号</AttributeID>
+              <Name>卡号</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>卡类别</AttributeID>
+              <Name>卡类别</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>币种代码</AttributeID>
+              <Name>币种代码</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>额度</AttributeID>
+              <Name>额度</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>日均消费金额</AttributeID>
+              <Name>日均消费金额</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>日均次数</AttributeID>
+              <Name>日均次数</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>单笔消费最小金额</AttributeID>
+              <Name>单笔消费最小金额</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>单笔消费最大金额</AttributeID>
+              <Name>单笔消费最大金额</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>个人收入 连续</AttributeID>
+              <Name>个人收入 连续</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>是否存在欺诈</AttributeID>
+              <Name>是否存在欺诈</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>卡号</ID>
+          <Name>卡号</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>卡号</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>卡类别</ID>
+          <Name>卡类别</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>卡类别</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>币种代码</ID>
+          <Name>币种代码</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>币种代码</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>额度</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>日均消费金额</ID>
+          <Name>日均消费金额</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>日均消费金额</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>日均次数</ID>
+          <Name>日均次数</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>日均次数</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>单笔消费最小金额</ID>
+          <Name>单笔消费最小金额</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>单笔消费最小金额</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>单笔消费最大金额</ID>
+          <Name>单笔消费最大金额</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>单笔消费最大金额</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>个人收入_连续</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>是否存在欺诈</ID>
+          <Name>是否存在欺诈</Name>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Double</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+                <ColumnID>是否存在欺诈</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+    <Dimension>
+      <ID>申请客户信息</ID>
+      <Name>申请客户信息</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="DataSourceViewBinding">
+        <DataSourceViewID>CreditRisk</DataSourceViewID>
+      </Source>
+      <ErrorConfiguration>
+        <KeyNotFound>ReportAndStop</KeyNotFound>
+        <KeyDuplicate>ReportAndStop</KeyDuplicate>
+        <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+      </ErrorConfiguration>
+      <CurrentStorageMode>Molap</CurrentStorageMode>
+      <Attributes>
+        <Attribute>
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>255</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_申请客户信息_x0024_</TableID>
+                <ColumnID>客户号</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+      </Attributes>
+      <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+    </Dimension>
+  </Dimensions>
+  <Cubes>
+    <Cube>
+      <ID>CreditRisk</ID>
+      <Name>CreditRisk</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="7" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-10872" scrolltop="3417" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="23262" y="11240" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="018600009001905f010004cbcecce5" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="拖欠历史记录$" left="5658" top="9986" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_拖欠历史记录$" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="消费历史记录$" left="20" top="16400" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3450" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e00007a0d0000da120000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_消费历史记录$" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="申请客户信息$" left="20" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_申请客户信息$" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="客户信用记录$" left="231" top="9000" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3027" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000d30b000088130000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_客户信用记录$" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="2958" top="11101" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[拖欠历史记录$-客户信用记录$]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="19" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="3258" y="11500" />
+                  <point x="4458" y="11500" />
+                  <point x="4458" y="11499" />
+                  <point x="5658" y="11499" />
+                </connector>
+              </ddscontrol>
+              <ddscontrol controlprogid="MSDDS.Polyline" left="1345" top="13501" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobj>
+                    <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                  </ddsxmlobj>
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dataSet.Relations[消费历史记录$-客户信用记录$]" vartype="8" />
+                    <property name="Virtual" value="0" vartype="11" />
+                    <property name="VisibleAP" value="0" vartype="3" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="2" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                  <point x="1744" y="14000" />
+                  <point x="1744" y="15200" />
+                  <point x="1745" y="15200" />
+                  <point x="1745" y="16400" />
+                </connector>
+              </ddscontrol>
+            </dds>
+          </Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>-10872</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>3417</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>20</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>75</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Dimensions>
+        <Dimension>
+          <ID>拖欠历史记录</ID>
+          <Name>拖欠历史记录</Name>
+          <DimensionID>拖欠历史记录</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>客户号</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>卡号</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>额度</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>拖欠标识</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>拖欠总金额</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>逾期天数</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>客户信用记录</ID>
+          <Name>客户信用记录</Name>
+          <DimensionID>客户信用记录</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>客户号</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>客户姓名</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>性别</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>年龄 连续</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>婚姻状态</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>户籍</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>教育程度</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>居住类型</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>职业类别</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>工作年限</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>个人收入 连续</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>保险缴纳</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>车辆情况</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>信用总评分</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>信用等级</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>额度</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>审批结果</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>消费历史记录</ID>
+          <Name>消费历史记录</Name>
+          <DimensionID>消费历史记录</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>客户号</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>卡号</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>卡类别</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>币种代码</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>额度</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>日均消费金额</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>日均次数</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>单笔消费最小金额</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>单笔消费最大金额</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>个人收入 连续</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>是否存在欺诈</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension>
+          <ID>申请客户信息</ID>
+          <Name>申请客户信息</Name>
+          <DimensionID>申请客户信息</DimensionID>
+          <Attributes>
+            <Attribute>
+              <AttributeID>客户号</AttributeID>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <MeasureGroups>
+        <MeasureGroup>
+          <ID>拖欠历史记录</ID>
+          <Name>拖欠历史记录</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>额度 - 拖欠历史记录</ID>
+              <Name>额度 - 拖欠历史记录</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                  <ColumnID>额度</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>拖欠标识</ID>
+              <Name>拖欠标识</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                  <ColumnID>拖欠标识</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>拖欠总金额</ID>
+              <Name>拖欠总金额</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                  <ColumnID>拖欠总金额</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>逾期天数</ID>
+              <Name>逾期天数</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                  <ColumnID>逾期天数</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>拖欠历史记录 计数</ID>
+              <Name>拖欠历史记录 计数</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="DegenerateMeasureGroupDimension">
+              <CubeDimensionID>拖欠历史记录</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>客户号</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>255</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                        <ColumnID>客户号</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>客户信用记录</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>客户号</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>255</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_拖欠历史记录_x0024_</TableID>
+                        <ColumnID>客户号</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>拖欠历史记录</ID>
+              <Name>拖欠历史记录</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>CreditRisk</DataSourceViewID>
+                <TableID>dbo_拖欠历史记录_x0024_</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+        <MeasureGroup>
+          <ID>消费历史记录</ID>
+          <Name>消费历史记录</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>额度 - 消费历史记录</ID>
+              <Name>额度 - 消费历史记录</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>额度</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>日均消费金额</ID>
+              <Name>日均消费金额</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>日均消费金额</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>日均次数</ID>
+              <Name>日均次数</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>日均次数</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>单笔消费最小金额</ID>
+              <Name>单笔消费最小金额</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>单笔消费最小金额</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>单笔消费最大金额</ID>
+              <Name>单笔消费最大金额</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>单笔消费最大金额</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>个人收入 连续 - 消费历史记录</ID>
+              <Name>个人收入 连续 - 消费历史记录</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>个人收入_连续</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>是否存在欺诈</ID>
+              <Name>是否存在欺诈</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                  <ColumnID>是否存在欺诈</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>消费历史记录 计数</ID>
+              <Name>消费历史记录 计数</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_消费历史记录_x0024_</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="DegenerateMeasureGroupDimension">
+              <CubeDimensionID>消费历史记录</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>客户号</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>255</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_消费历史记录_x0024_</TableID>
+                        <ColumnID>客户号</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>客户信用记录</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>客户号</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>255</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_消费历史记录_x0024_</TableID>
+                        <ColumnID>客户号</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>消费历史记录</ID>
+              <Name>消费历史记录</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>CreditRisk</DataSourceViewID>
+                <TableID>dbo_消费历史记录_x0024_</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+        <MeasureGroup>
+          <ID>申请客户信息</ID>
+          <Name>申请客户信息</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Measures>
+            <Measure>
+              <ID>年龄</ID>
+              <Name>年龄</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_申请客户信息_x0024_</TableID>
+                  <ColumnID>年龄</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>工作年限</ID>
+              <Name>工作年限</Name>
+              <Source>
+                <DataType>Double</DataType>
+                <Source xsi:type="ColumnBinding">
+                  <TableID>dbo_申请客户信息_x0024_</TableID>
+                  <ColumnID>工作年限</ColumnID>
+                </Source>
+              </Source>
+            </Measure>
+            <Measure>
+              <ID>申请客户信息 计数</ID>
+              <Name>申请客户信息 计数</Name>
+              <AggregateFunction>Count</AggregateFunction>
+              <Source>
+                <DataType>Integer</DataType>
+                <DataSize>4</DataSize>
+                <Source xsi:type="RowBinding">
+                  <TableID>dbo_申请客户信息_x0024_</TableID>
+                </Source>
+              </Source>
+            </Measure>
+          </Measures>
+          <StorageMode>Molap</StorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <Dimensions>
+            <Dimension xsi:type="DegenerateMeasureGroupDimension">
+              <CubeDimensionID>申请客户信息</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>客户号</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>WChar</DataType>
+                      <DataSize>255</DataSize>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_申请客户信息_x0024_</TableID>
+                        <ColumnID>客户号</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Partitions>
+            <Partition>
+              <ID>申请客户信息</ID>
+              <Name>申请客户信息</Name>
+              <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+              <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+              <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+              <State>Unprocessed</State>
+              <Source xsi:type="DsvTableBinding">
+                <DataSourceViewID>CreditRisk</DataSourceViewID>
+                <TableID>dbo_申请客户信息_x0024_</TableID>
+              </Source>
+              <StorageMode>Molap</StorageMode>
+              <CurrentStorageMode>Molap</CurrentStorageMode>
+              <ProcessingMode>Regular</ProcessingMode>
+            </Partition>
+          </Partitions>
+        </MeasureGroup>
+      </MeasureGroups>
+      <Source>
+        <DataSourceViewID>CreditRisk</DataSourceViewID>
+      </Source>
+    </Cube>
+  </Cubes>
+  <MiningStructures>
+    <MiningStructure>
+      <ID>客户信用记录</ID>
+      <Name>客户信用记录</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>MDXFilterComponent</Name>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition" /&gt;&lt;/Filter&gt;</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="CubeDimensionBinding">
+        <DataSourceID>.</DataSourceID>
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <Filter></Filter>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <IsKey>true</IsKey>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>客户号</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Key</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>保险缴纳</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>车辆情况</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>额度</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>个人收入 连续</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>工作年限</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>户籍</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>婚姻状态</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>教育程度</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>居住类型</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>客户姓名</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>年龄 连续</ID>
+          <Name>年龄 连续</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>年龄 连续</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>信用等级</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>信用总评分</ID>
+          <Name>信用总评分</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>信用总评分</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>性别</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>职业类别</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>客户信用记录</ID>
+          <Name>客户信用记录</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Decision_Trees</Algorithm>
+          <Columns>
+            <Column>
+              <ID>客户号</ID>
+              <Name>客户号</Name>
+              <SourceColumnID>客户号</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>保险缴纳</ID>
+              <Name>保险缴纳</Name>
+              <SourceColumnID>保险缴纳</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>车辆情况</ID>
+              <Name>车辆情况</Name>
+              <SourceColumnID>车辆情况</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>个人收入 连续</ID>
+              <Name>个人收入 连续</Name>
+              <SourceColumnID>个人收入 连续</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>工作年限</ID>
+              <Name>工作年限</Name>
+              <SourceColumnID>工作年限</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>户籍</ID>
+              <Name>户籍</Name>
+              <SourceColumnID>户籍</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>婚姻状态</ID>
+              <Name>婚姻状态</Name>
+              <SourceColumnID>婚姻状态</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>教育程度</ID>
+              <Name>教育程度</Name>
+              <SourceColumnID>教育程度</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>居住类型</ID>
+              <Name>居住类型</Name>
+              <SourceColumnID>居住类型</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>客户姓名</ID>
+              <Name>客户姓名</Name>
+              <SourceColumnID>客户姓名</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>年龄 连续</ID>
+              <Name>年龄 连续</Name>
+              <SourceColumnID>年龄 连续</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>性别</ID>
+              <Name>性别</Name>
+              <SourceColumnID>性别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>职业类别</ID>
+              <Name>职业类别</Name>
+              <SourceColumnID>职业类别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>信用等级</ID>
+              <Name>信用等级</Name>
+              <SourceColumnID>信用等级</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>信用总评分</ID>
+              <Name>信用总评分</Name>
+              <SourceColumnID>信用总评分</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+          </Columns>
+        </MiningModel>
+        <MiningModel>
+          <ID>信用总评分关联模型</ID>
+          <Name>信用总评分关联模型</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Association_Rules</Algorithm>
+          <Columns>
+            <Column>
+              <ID>客户号</ID>
+              <Name>客户号</Name>
+              <SourceColumnID>客户号</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>保险缴纳</ID>
+              <Name>保险缴纳</Name>
+              <SourceColumnID>保险缴纳</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>车辆情况</ID>
+              <Name>车辆情况</Name>
+              <SourceColumnID>车辆情况</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>户籍</ID>
+              <Name>户籍</Name>
+              <SourceColumnID>户籍</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>婚姻状态</ID>
+              <Name>婚姻状态</Name>
+              <SourceColumnID>婚姻状态</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>教育程度</ID>
+              <Name>教育程度</Name>
+              <SourceColumnID>教育程度</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>居住类型</ID>
+              <Name>居住类型</Name>
+              <SourceColumnID>居住类型</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>客户姓名</ID>
+              <Name>客户姓名</Name>
+              <SourceColumnID>客户姓名</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>性别</ID>
+              <Name>性别</Name>
+              <SourceColumnID>性别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>职业类别</ID>
+              <Name>职业类别</Name>
+              <SourceColumnID>职业类别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>信用等级</ID>
+              <Name>信用等级</Name>
+              <SourceColumnID>信用等级</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+          </Columns>
+        </MiningModel>
+        <MiningModel>
+          <ID>逻辑回归</ID>
+          <Name>逻辑回归</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Logistic_Regression</Algorithm>
+          <Columns>
+            <Column>
+              <ID>客户号</ID>
+              <Name>客户号</Name>
+              <SourceColumnID>客户号</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>保险缴纳</ID>
+              <Name>保险缴纳</Name>
+              <SourceColumnID>保险缴纳</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>车辆情况</ID>
+              <Name>车辆情况</Name>
+              <SourceColumnID>车辆情况</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>个人收入 连续</ID>
+              <Name>个人收入 连续</Name>
+              <SourceColumnID>个人收入 连续</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>工作年限</ID>
+              <Name>工作年限</Name>
+              <SourceColumnID>工作年限</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>户籍</ID>
+              <Name>户籍</Name>
+              <SourceColumnID>户籍</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>婚姻状态</ID>
+              <Name>婚姻状态</Name>
+              <SourceColumnID>婚姻状态</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>教育程度</ID>
+              <Name>教育程度</Name>
+              <SourceColumnID>教育程度</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>居住类型</ID>
+              <Name>居住类型</Name>
+              <SourceColumnID>居住类型</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>客户姓名</ID>
+              <Name>客户姓名</Name>
+              <SourceColumnID>客户姓名</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>年龄 连续</ID>
+              <Name>年龄 连续</Name>
+              <SourceColumnID>年龄 连续</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>性别</ID>
+              <Name>性别</Name>
+              <SourceColumnID>性别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>职业类别</ID>
+              <Name>职业类别</Name>
+              <SourceColumnID>职业类别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>信用等级</ID>
+              <Name>信用等级</Name>
+              <SourceColumnID>信用等级</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>信用总评分</ID>
+              <Name>信用总评分</Name>
+              <SourceColumnID>信用总评分</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+          </Columns>
+        </MiningModel>
+        <MiningModel>
+          <ID>朴素贝叶斯</ID>
+          <Name>朴素贝叶斯</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+          <Columns>
+            <Column>
+              <ID>客户号</ID>
+              <Name>客户号</Name>
+              <SourceColumnID>客户号</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>保险缴纳</ID>
+              <Name>保险缴纳</Name>
+              <SourceColumnID>保险缴纳</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>车辆情况</ID>
+              <Name>车辆情况</Name>
+              <SourceColumnID>车辆情况</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>户籍</ID>
+              <Name>户籍</Name>
+              <SourceColumnID>户籍</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>婚姻状态</ID>
+              <Name>婚姻状态</Name>
+              <SourceColumnID>婚姻状态</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>教育程度</ID>
+              <Name>教育程度</Name>
+              <SourceColumnID>教育程度</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>居住类型</ID>
+              <Name>居住类型</Name>
+              <SourceColumnID>居住类型</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>客户姓名</ID>
+              <Name>客户姓名</Name>
+              <SourceColumnID>客户姓名</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>性别</ID>
+              <Name>性别</Name>
+              <SourceColumnID>性别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>职业类别</ID>
+              <Name>职业类别</Name>
+              <SourceColumnID>职业类别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>信用等级</ID>
+              <Name>信用等级</Name>
+              <SourceColumnID>信用等级</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+    <MiningStructure>
+      <ID>客户信用记录 1</ID>
+      <Name>客户信用记录 1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>MDXFilterComponent</Name>
+          <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition" /&gt;&lt;/Filter&gt;</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+          <Value>false</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+          <Value>0</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+          <Value>100</Value>
+        </Annotation>
+      </Annotations>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Source xsi:type="CubeDimensionBinding">
+        <DataSourceID>.</DataSourceID>
+        <CubeID>CreditRisk</CubeID>
+        <CubeDimensionID>客户信用记录</CubeDimensionID>
+        <Filter></Filter>
+      </Source>
+      <Columns>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>客户号</ID>
+          <Name>客户号</Name>
+          <IsKey>true</IsKey>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>客户号</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Key</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>保险缴纳</ID>
+          <Name>保险缴纳</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>保险缴纳</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>车辆情况</ID>
+          <Name>车辆情况</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>车辆情况</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>额度</ID>
+          <Name>额度</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>额度</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>个人收入 连续</ID>
+          <Name>个人收入 连续</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>个人收入 连续</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>工作年限</ID>
+          <Name>工作年限</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>工作年限</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>户籍</ID>
+          <Name>户籍</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>户籍</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>婚姻状态</ID>
+          <Name>婚姻状态</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>婚姻状态</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>教育程度</ID>
+          <Name>教育程度</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>教育程度</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>居住类型</ID>
+          <Name>居住类型</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>居住类型</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>客户姓名</ID>
+          <Name>客户姓名</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>客户姓名</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>年龄 连续</ID>
+          <Name>年龄 连续</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>年龄 连续</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>审批结果</ID>
+          <Name>审批结果</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>审批结果</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>信用等级</ID>
+          <Name>信用等级</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>信用等级</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>信用总评分</ID>
+          <Name>信用总评分</Name>
+          <Type>Double</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>信用总评分</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>性别</ID>
+          <Name>性别</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>性别</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>职业类别</ID>
+          <Name>职业类别</Name>
+          <Type>Text</Type>
+          <Source xsi:type="CubeAttributeBinding">
+            <CubeID>CreditRisk</CubeID>
+            <CubeDimensionID>客户信用记录</CubeDimensionID>
+            <AttributeID>职业类别</AttributeID>
+            <Type>All</Type>
+          </Source>
+          <Content>Discrete</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>单笔消费最大金额</ID>
+          <Name>单笔消费最大金额</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>单笔消费最大金额</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>单笔消费最小金额</ID>
+          <Name>单笔消费最小金额</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>单笔消费最小金额</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>额度 - 拖欠历史记录</ID>
+          <Name>额度 - 拖欠历史记录</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>额度 - 拖欠历史记录</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>额度 - 消费历史记录</ID>
+          <Name>额度 - 消费历史记录</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>额度 - 消费历史记录</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>个人收入 连续 - 消费历史记录</ID>
+          <Name>个人收入 连续 - 消费历史记录</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>个人收入 连续 - 消费历史记录</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>日均次数</ID>
+          <Name>日均次数</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>日均次数</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>日均消费金额</ID>
+          <Name>日均消费金额</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>日均消费金额</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>是否存在欺诈</ID>
+          <Name>是否存在欺诈</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>是否存在欺诈</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>拖欠标识</ID>
+          <Name>拖欠标识</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>拖欠标识</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>拖欠历史记录 计数</ID>
+          <Name>拖欠历史记录 计数</Name>
+          <Type>Long</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>拖欠历史记录 计数</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>拖欠总金额</ID>
+          <Name>拖欠总金额</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>拖欠总金额</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>消费历史记录 计数</ID>
+          <Name>消费历史记录 计数</Name>
+          <Type>Long</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>消费历史记录 计数</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+        <Column xsi:type="ScalarMiningStructureColumn">
+          <ID>逾期天数</ID>
+          <Name>逾期天数</Name>
+          <Type>Double</Type>
+          <Source xsi:type="MeasureBinding">
+            <MeasureID>逾期天数</MeasureID>
+          </Source>
+          <Content>Continuous</Content>
+        </Column>
+      </Columns>
+      <MiningModels>
+        <MiningModel>
+          <ID>客户信用记录 1</ID>
+          <Name>客户信用记录 1</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Algorithm>Microsoft_Decision_Trees</Algorithm>
+          <Columns>
+            <Column>
+              <ID>客户号</ID>
+              <Name>客户号</Name>
+              <SourceColumnID>客户号</SourceColumnID>
+              <Usage>Key</Usage>
+            </Column>
+            <Column>
+              <ID>保险缴纳</ID>
+              <Name>保险缴纳</Name>
+              <SourceColumnID>保险缴纳</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>车辆情况</ID>
+              <Name>车辆情况</Name>
+              <SourceColumnID>车辆情况</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>额度</ID>
+              <Name>额度</Name>
+              <SourceColumnID>额度</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>个人收入 连续</ID>
+              <Name>个人收入 连续</Name>
+              <SourceColumnID>个人收入 连续</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>工作年限</ID>
+              <Name>工作年限</Name>
+              <SourceColumnID>工作年限</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>户籍</ID>
+              <Name>户籍</Name>
+              <SourceColumnID>户籍</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>婚姻状态</ID>
+              <Name>婚姻状态</Name>
+              <SourceColumnID>婚姻状态</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>教育程度</ID>
+              <Name>教育程度</Name>
+              <SourceColumnID>教育程度</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>居住类型</ID>
+              <Name>居住类型</Name>
+              <SourceColumnID>居住类型</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>客户姓名</ID>
+              <Name>客户姓名</Name>
+              <SourceColumnID>客户姓名</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>年龄 连续</ID>
+              <Name>年龄 连续</Name>
+              <SourceColumnID>年龄 连续</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>审批结果</ID>
+              <Name>审批结果</Name>
+              <SourceColumnID>审批结果</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>信用等级</ID>
+              <Name>信用等级</Name>
+              <SourceColumnID>信用等级</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+            </Column>
+            <Column>
+              <ID>信用总评分</ID>
+              <Name>信用总评分</Name>
+              <SourceColumnID>信用总评分</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>性别</ID>
+              <Name>性别</Name>
+              <SourceColumnID>性别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>职业类别</ID>
+              <Name>职业类别</Name>
+              <SourceColumnID>职业类别</SourceColumnID>
+            </Column>
+            <Column>
+              <ID>单笔消费最大金额</ID>
+              <Name>单笔消费最大金额</Name>
+              <SourceColumnID>单笔消费最大金额</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>单笔消费最小金额</ID>
+              <Name>单笔消费最小金额</Name>
+              <SourceColumnID>单笔消费最小金额</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>额度 - 拖欠历史记录</ID>
+              <Name>额度 - 拖欠历史记录</Name>
+              <SourceColumnID>额度 - 拖欠历史记录</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>额度 - 消费历史记录</ID>
+              <Name>额度 - 消费历史记录</Name>
+              <SourceColumnID>额度 - 消费历史记录</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>个人收入 连续 - 消费历史记录</ID>
+              <Name>个人收入 连续 - 消费历史记录</Name>
+              <SourceColumnID>个人收入 连续 - 消费历史记录</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>日均次数</ID>
+              <Name>日均次数</Name>
+              <SourceColumnID>日均次数</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>日均消费金额</ID>
+              <Name>日均消费金额</Name>
+              <SourceColumnID>日均消费金额</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>是否存在欺诈</ID>
+              <Name>是否存在欺诈</Name>
+              <SourceColumnID>是否存在欺诈</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>拖欠标识</ID>
+              <Name>拖欠标识</Name>
+              <SourceColumnID>拖欠标识</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>拖欠历史记录 计数</ID>
+              <Name>拖欠历史记录 计数</Name>
+              <SourceColumnID>拖欠历史记录 计数</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>拖欠总金额</ID>
+              <Name>拖欠总金额</Name>
+              <SourceColumnID>拖欠总金额</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>消费历史记录 计数</ID>
+              <Name>消费历史记录 计数</Name>
+              <SourceColumnID>消费历史记录 计数</SourceColumnID>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+            <Column>
+              <ID>逾期天数</ID>
+              <Name>逾期天数</Name>
+              <SourceColumnID>逾期天数</SourceColumnID>
+              <Usage>PredictOnly</Usage>
+              <ModelingFlags>
+                <ModelingFlag>REGRESSOR</ModelingFlag>
+              </ModelingFlags>
+            </Column>
+          </Columns>
+        </MiningModel>
+      </MiningModels>
+      <ddl100_100:HoldoutMaxPercent>10</ddl100_100:HoldoutMaxPercent>
+    </MiningStructure>
+  </MiningStructures>
+  <DataSources>
+    <DataSource xsi:type="RelationalDataSource">
+      <ID>CreditRisk</ID>
+      <Name>CreditRisk</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <ConnectionString>Provider=SQLNCLI11.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=CreditRisk</ConnectionString>
+      <ConnectionStringSecurity>Unchanged</ConnectionStringSecurity>
+      <ImpersonationInfo>
+        <ImpersonationMode>ImpersonateServiceAccount</ImpersonationMode>
+        <ImpersonationInfoSecurity>Unchanged</ImpersonationInfoSecurity>
+      </ImpersonationInfo>
+      <Timeout>PT0S</Timeout>
+    </DataSource>
+  </DataSources>
+  <DataSourceViews>
+    <DataSourceView>
+      <ID>CreditRisk</ID>
+      <Name>CreditRisk</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Annotations>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+          <Value>_ALL_TABLES_</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:NameMatchingCriteria</Name>
+          <Value>1</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+          <Value>true</Value>
+        </Annotation>
+        <Annotation>
+          <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+          <Value>
+            <Layouts xmlns="">
+              <Diagram>
+                <Name>_ALL_TABLES_</Name>
+                <DiagramLayout>
+                  <dds>
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="14" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-989" scrolltop="-1929" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="23940" y="12573" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                      <font>
+                        <ddsxmlobjectstreamwrapper binary="018600009001905f010004cbcecce5" />
+                      </font>
+                      <mouseicon>
+                        <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                      </mouseicon>
+                    </diagram>
+                    <layoutmanager>
+                      <ddsxmlobj />
+                    </layoutmanager>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="客户信用记录$" left="5615" top="1799" logicalid="7" controlid="1" masterid="0" hint1="0" hint2="0" width="3027" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000d30b000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_客户信用记录$" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="申请客户信息$" left="16826" top="0" logicalid="8" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000088130000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_申请客户信息$" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="拖欠历史记录$" left="11045" top="1611" logicalid="9" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_拖欠历史记录$" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="消费历史记录$" left="0" top="1841" logicalid="10" controlid="4" masterid="0" hint1="0" hint2="0" width="3450" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobjectstreaminitwrapper binary="000e00007a0d0000da120000" />
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dbo_消费历史记录$" vartype="8" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <shape groupshapeid="0" groupnode="0" />
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="3150" top="1700" logicalid="11" controlid="5" masterid="0" hint1="0" hint2="0" width="2765" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[消费历史记录$-客户信用记录$]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="10" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="5615" y="2099" />
+                        <point x="4533" y="2099" />
+                        <point x="4533" y="2054" />
+                        <point x="3450" y="2054" />
+                      </connector>
+                    </ddscontrol>
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="8342" top="1700" logicalid="12" controlid="6" masterid="0" hint1="0" hint2="0" width="3003" height="1174" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                      <control>
+                        <ddsxmlobj>
+                          <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                        </ddsxmlobj>
+                      </control>
+                      <layoutobject>
+                        <ddsxmlobj>
+                          <property name="LogicalObject" value="dataSet.Relations[拖欠历史记录$-客户信用记录$]" vartype="8" />
+                          <property name="Virtual" value="0" vartype="11" />
+                          <property name="VisibleAP" value="0" vartype="3" />
+                        </ddsxmlobj>
+                      </layoutobject>
+                      <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="11" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+                        <point x="8642" y="2099" />
+                        <point x="9917" y="2099" />
+                        <point x="9917" y="2574" />
+                        <point x="11045" y="2574" />
+                      </connector>
+                    </ddscontrol>
+                  </dds>
+</DiagramLayout>
+                <ShowRelationshipNames>False</ShowRelationshipNames>
+                <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+                <DiagramViewPortLeft>-989</DiagramViewPortLeft>
+                <DiagramViewPortTop>-1929</DiagramViewPortTop>
+                <DiagramBoundingLeft>0</DiagramBoundingLeft>
+                <DiagramBoundingTop>0</DiagramBoundingTop>
+                <DiagramZoom>100</DiagramZoom>
+              </Diagram>
+            </Layouts>
+          </Value>
+        </Annotation>
+      </Annotations>
+      <DataSourceID>CreditRisk</DataSourceID>
+      <Schema>
+        <xs:schema id="CreditRisk" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+          <xs:element name="CreditRisk" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="50cf9e62-755a-4716-8b6b-1a97dc859081">
+            <xs:complexType>
+              <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="dbo_客户信用记录_x0024_" msprop:design-time-name="ad151680-3d46-443d-8c90-74fc17883124" msprop:FriendlyName="客户信用记录$" msprop:DbSchemaName="dbo" msprop:DbTableName="客户信用记录$" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="客户号" msprop:design-time-name="5b88a900-4030-4f0c-821e-04d0073f8b08" msprop:DbColumnName="客户号" msprop:FriendlyName="客户号">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="客户姓名" msprop:design-time-name="5750b3b0-0cdf-488e-b035-eff3f405fdfe" msprop:DbColumnName="客户姓名" msprop:FriendlyName="客户姓名" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="性别" msprop:design-time-name="2695aa5e-fd44-452c-badb-942c8573f7db" msprop:DbColumnName="性别" msprop:FriendlyName="性别" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="年龄_连续" msprop:design-time-name="19f69073-fdb3-4607-b13d-93c74ebfbe20" msprop:DbColumnName="年龄_连续" msprop:FriendlyName="年龄_连续" type="xs:double" minOccurs="0" />
+                      <xs:element name="婚姻状态" msprop:design-time-name="9da88154-96fa-49e3-989e-99af72ca4aa9" msprop:DbColumnName="婚姻状态" msprop:FriendlyName="婚姻状态" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="户籍" msprop:design-time-name="732ff52b-ef8d-439e-a255-b3c33e31cc1f" msprop:DbColumnName="户籍" msprop:FriendlyName="户籍" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="教育程度" msprop:design-time-name="9aac7e25-b1d9-4109-b55d-c37eb5fec1b1" msprop:DbColumnName="教育程度" msprop:FriendlyName="教育程度" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="居住类型" msprop:design-time-name="36e3e913-ba02-4634-916d-11a8be2f95b2" msprop:DbColumnName="居住类型" msprop:FriendlyName="居住类型" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="职业类别" msprop:design-time-name="b95bdda3-656c-4508-9c50-310958043c27" msprop:DbColumnName="职业类别" msprop:FriendlyName="职业类别" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="工作年限" msprop:design-time-name="27c4b68a-3087-4cc2-9a15-38df0b17fd04" msprop:DbColumnName="工作年限" msprop:FriendlyName="工作年限" type="xs:double" minOccurs="0" />
+                      <xs:element name="个人收入_连续" msprop:design-time-name="22a30b77-6c4b-4d7d-a9b4-05fb083c5bba" msprop:DbColumnName="个人收入_连续" msprop:FriendlyName="个人收入_连续" type="xs:double" minOccurs="0" />
+                      <xs:element name="保险缴纳" msprop:design-time-name="afc61bc9-3936-4ea2-81eb-2bdd93ff74c5" msprop:DbColumnName="保险缴纳" msprop:FriendlyName="保险缴纳" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="车辆情况" msprop:design-time-name="99229c24-8d91-4c69-bc4b-acdb7ef551c0" msprop:DbColumnName="车辆情况" msprop:FriendlyName="车辆情况" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="信用总评分" msprop:design-time-name="a4eeec1f-6095-4aaf-8008-4883d32248e3" msprop:DbColumnName="信用总评分" msprop:FriendlyName="信用总评分" type="xs:double" minOccurs="0" />
+                      <xs:element name="信用等级" msprop:design-time-name="b4c456a9-6c06-460a-bbfd-1355d78085be" msprop:DbColumnName="信用等级" msprop:FriendlyName="信用等级" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="额度" msprop:design-time-name="3d4d09ac-527e-4449-9a72-57a301a87dfc" msprop:DbColumnName="额度" msprop:FriendlyName="额度" type="xs:double" minOccurs="0" />
+                      <xs:element name="审批结果" msprop:design-time-name="9d2537ec-90ff-4cab-834a-1a77fd6d7c5c" msprop:DbColumnName="审批结果" msprop:FriendlyName="审批结果" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_申请客户信息_x0024_" msprop:design-time-name="138fd4f1-e4cb-4969-8ecd-4cca5eddeed0" msprop:FriendlyName="申请客户信息$" msprop:DbSchemaName="dbo" msprop:DbTableName="申请客户信息$" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="客户号" msprop:design-time-name="c0a38874-b75b-48e6-bdae-bc2d6678eb62" msprop:DbColumnName="客户号" msprop:FriendlyName="客户号">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="客户姓名" msprop:design-time-name="381c746c-5c73-4beb-b217-310079e7feb7" msprop:DbColumnName="客户姓名" msprop:FriendlyName="客户姓名" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="证件号码" msprop:design-time-name="45c92344-3fff-4737-8244-7dee6b048670" msprop:DbColumnName="证件号码" msprop:FriendlyName="证件号码" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="年龄" msprop:design-time-name="e047858f-7117-4550-b46d-116d11ec5a2c" msprop:DbColumnName="年龄" msprop:FriendlyName="年龄" type="xs:double" minOccurs="0" />
+                      <xs:element name="性别" msprop:design-time-name="dceacc41-f376-4f53-819e-b18ac7edac43" msprop:DbColumnName="性别" msprop:FriendlyName="性别" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="婚姻状态" msprop:design-time-name="ce64423f-30e1-49a8-84f6-40b008989f19" msprop:DbColumnName="婚姻状态" msprop:FriendlyName="婚姻状态" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="教育程度" msprop:design-time-name="82a1b55a-ffd4-4ef7-9874-a9e0c9a09f04" msprop:DbColumnName="教育程度" msprop:FriendlyName="教育程度" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="职业类别" msprop:design-time-name="d348e060-7b3f-43ee-bebb-73c68ee3f21a" msprop:DbColumnName="职业类别" msprop:FriendlyName="职业类别" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="户籍" msprop:design-time-name="489cffe4-e27c-4da2-b14b-cac0c24d307d" msprop:DbColumnName="户籍" msprop:FriendlyName="户籍" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="居住类型" msprop:design-time-name="780cbbb9-b1a2-43dc-a6a2-9e8009fe9c4a" msprop:DbColumnName="居住类型" msprop:FriendlyName="居住类型" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="车辆情况" msprop:design-time-name="e4fed37e-ac85-4c01-a107-4913c91faa30" msprop:DbColumnName="车辆情况" msprop:FriendlyName="车辆情况" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="保险缴纳" msprop:design-time-name="84bf7549-62a0-4351-991f-0e8673e4cc88" msprop:DbColumnName="保险缴纳" msprop:FriendlyName="保险缴纳" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="工作年限" msprop:design-time-name="50bb9ede-3bc7-4daf-8f6f-3b2049462d8b" msprop:DbColumnName="工作年限" msprop:FriendlyName="工作年限" type="xs:double" minOccurs="0" />
+                      <xs:element name="个人年收入" msprop:design-time-name="77cac5ac-bed8-46fd-a297-6c2317afe3b6" msprop:DbColumnName="个人年收入" msprop:FriendlyName="个人年收入" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="信贷情况" msprop:design-time-name="9dc3ea75-5ae3-4e30-a306-4187026b6dcd" msprop:DbColumnName="信贷情况" msprop:FriendlyName="信贷情况" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_拖欠历史记录_x0024_" msprop:design-time-name="19613b75-4119-49d0-9987-bf0ad3baba93" msprop:FriendlyName="拖欠历史记录$" msprop:DbSchemaName="dbo" msprop:DbTableName="拖欠历史记录$" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="客户号" msprop:design-time-name="fdb789be-4c7f-4797-973f-b9c9c0ab99fd" msprop:DbColumnName="客户号" msprop:FriendlyName="客户号">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="卡号" msprop:design-time-name="76a86d30-51d0-4ddf-96d3-f576421d34e5" msprop:DbColumnName="卡号" msprop:FriendlyName="卡号">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="额度" msprop:design-time-name="be2cb932-b8d3-4089-9d00-fc6ef33c4aa0" msprop:DbColumnName="额度" msprop:FriendlyName="额度" type="xs:double" minOccurs="0" />
+                      <xs:element name="拖欠标识" msprop:design-time-name="2157331a-8159-4b90-ab67-60a33b5dc5d6" msprop:DbColumnName="拖欠标识" msprop:FriendlyName="拖欠标识" type="xs:double" minOccurs="0" />
+                      <xs:element name="拖欠总金额" msprop:design-time-name="96a9a2a6-dff3-42d2-8b25-61b63d4a760b" msprop:DbColumnName="拖欠总金额" msprop:FriendlyName="拖欠总金额" type="xs:double" minOccurs="0" />
+                      <xs:element name="逾期天数" msprop:design-time-name="d6384ba5-c8b2-4bbb-bb2a-18bacfcf66bc" msprop:DbColumnName="逾期天数" msprop:FriendlyName="逾期天数" type="xs:double" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="dbo_消费历史记录_x0024_" msprop:design-time-name="9ad0f51e-f07c-4022-adeb-81a66067d007" msprop:FriendlyName="消费历史记录$" msprop:DbSchemaName="dbo" msprop:DbTableName="消费历史记录$" msprop:TableType="Table">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="客户号" msprop:design-time-name="ec825347-d0a5-4a5c-b0a5-9ffbfba68e60" msprop:DbColumnName="客户号" msprop:FriendlyName="客户号">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="卡号" msprop:design-time-name="45919d19-6d02-449a-bf41-4c8ede8d1356" msprop:DbColumnName="卡号" msprop:FriendlyName="卡号">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="卡类别" msprop:design-time-name="4aadfd5c-c5d2-498b-b076-e8f383d736b3" msprop:DbColumnName="卡类别" msprop:FriendlyName="卡类别" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="币种代码" msprop:design-time-name="b8920690-5c53-4440-954c-529b1c836ff2" msprop:DbColumnName="币种代码" msprop:FriendlyName="币种代码" minOccurs="0">
+                        <xs:simpleType>
+                          <xs:restriction base="xs:string">
+                            <xs:maxLength value="255" />
+                          </xs:restriction>
+                        </xs:simpleType>
+                      </xs:element>
+                      <xs:element name="额度" msprop:design-time-name="30f9484c-1826-4da7-b3c9-da3121b7107f" msprop:DbColumnName="额度" msprop:FriendlyName="额度" type="xs:double" minOccurs="0" />
+                      <xs:element name="日均消费金额" msprop:design-time-name="63274419-cc35-42b3-b15a-845e538d2e25" msprop:DbColumnName="日均消费金额" msprop:FriendlyName="日均消费金额" type="xs:double" minOccurs="0" />
+                      <xs:element name="日均次数" msprop:design-time-name="b674cb14-e380-4fea-b18c-4e28676a6ee4" msprop:DbColumnName="日均次数" msprop:FriendlyName="日均次数" type="xs:double" minOccurs="0" />
+                      <xs:element name="单笔消费最小金额" msprop:design-time-name="0eb782e2-abe1-43e1-a31b-c115e5810f1f" msprop:DbColumnName="单笔消费最小金额" msprop:FriendlyName="单笔消费最小金额" type="xs:double" minOccurs="0" />
+                      <xs:element name="单笔消费最大金额" msprop:design-time-name="68dbe283-771e-4ad2-888b-1267f5de1c9e" msprop:DbColumnName="单笔消费最大金额" msprop:FriendlyName="单笔消费最大金额" type="xs:double" minOccurs="0" />
+                      <xs:element name="个人收入_连续" msprop:design-time-name="46acb323-fcce-4671-b927-6210be96ca2f" msprop:DbColumnName="个人收入_连续" msprop:FriendlyName="个人收入_连续" type="xs:double" minOccurs="0" />
+                      <xs:element name="是否存在欺诈" msprop:design-time-name="8422a17e-ce5e-4421-9bc9-d3a2fde48c38" msprop:DbColumnName="是否存在欺诈" msprop:FriendlyName="是否存在欺诈" type="xs:double" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:choice>
+            </xs:complexType>
+            <xs:unique name="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_客户信用记录_x0024_" />
+              <xs:field xpath="客户号" />
+            </xs:unique>
+            <xs:unique name="dbo_申请客户信息_x0024__Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_申请客户信息_x0024_" />
+              <xs:field xpath="客户号" />
+            </xs:unique>
+            <xs:unique name="dbo_拖欠历史记录_x0024__Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_拖欠历史记录_x0024_" />
+              <xs:field xpath="客户号" />
+            </xs:unique>
+            <xs:unique name="dbo_消费历史记录_x0024__Constraint1" msdata:ConstraintName="Constraint1" msprop:IsLogical="True" msdata:PrimaryKey="true">
+              <xs:selector xpath=".//dbo_消费历史记录_x0024_" />
+              <xs:field xpath="客户号" />
+            </xs:unique>
+          </xs:element>
+          <xs:annotation>
+            <xs:appinfo>
+              <msdata:Relationship name="消费历史记录_x0024_-客户信用记录_x0024_" msdata:parent="dbo_客户信用记录_x0024_" msdata:child="dbo_消费历史记录_x0024_" msdata:parentkey="客户号" msdata:childkey="客户号" msprop:IsLogical="True" msprop:Description="" />
+              <msdata:Relationship name="拖欠历史记录_x0024_-客户信用记录_x0024_" msdata:parent="dbo_客户信用记录_x0024_" msdata:child="dbo_拖欠历史记录_x0024_" msdata:parentkey="客户号" msdata:childkey="客户号" msprop:IsLogical="True" msprop:Description="" />
+            </xs:appinfo>
+          </xs:annotation>
+        </xs:schema>
+        <CreditRisk xmlns="" />
+      </Schema>
+    </DataSourceView>
+  </DataSourceViews>
+</Database>
